@@ -1,0 +1,801 @@
+[
+ {
+  "id": "ch1-v1",
+  "title": "فصل 1: مجموعه‌ها — نمونه اول (مقدماتی)",
+  "kind": "chapter",
+  "chapters": [
+   "sets"
+  ],
+  "level": "مقدماتی",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch1-v1.pdf",
+   "keyPdf": "/files/exams/ch1-v1-key.pdf",
+   "examDocx": "/files/exams/ch1-v1.docx",
+   "keyDocx": "/files/exams/ch1-v1-key.docx"
+  },
+  "sizes": {
+   "examPdf": 331925,
+   "keyPdf": 40142,
+   "examDocx": 11107,
+   "keyDocx": 11789
+  }
+ },
+ {
+  "id": "ch1-v2",
+  "title": "فصل 1: مجموعه‌ها — نمونه دوم (متوسط)",
+  "kind": "chapter",
+  "chapters": [
+   "sets"
+  ],
+  "level": "متوسط",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch1-v2.pdf",
+   "keyPdf": "/files/exams/ch1-v2-key.pdf",
+   "examDocx": "/files/exams/ch1-v2.docx",
+   "keyDocx": "/files/exams/ch1-v2-key.docx"
+  },
+  "sizes": {
+   "examPdf": 332327,
+   "keyPdf": 39547,
+   "examDocx": 11125,
+   "keyDocx": 11799
+  }
+ },
+ {
+  "id": "ch1-v3",
+  "title": "فصل 1: مجموعه‌ها — نمونه سوم (چالشی)",
+  "kind": "chapter",
+  "chapters": [
+   "sets"
+  ],
+  "level": "چالشی",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch1-v3.pdf",
+   "keyPdf": "/files/exams/ch1-v3-key.pdf",
+   "examDocx": "/files/exams/ch1-v3.docx",
+   "keyDocx": "/files/exams/ch1-v3-key.docx"
+  },
+  "sizes": {
+   "examPdf": 332416,
+   "keyPdf": 40455,
+   "examDocx": 11077,
+   "keyDocx": 11868
+  }
+ },
+ {
+  "id": "ch2-v1",
+  "title": "فصل 2: عددهای حقیقی — نمونه اول (مقدماتی)",
+  "kind": "chapter",
+  "chapters": [
+   "real-numbers"
+  ],
+  "level": "مقدماتی",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch2-v1.pdf",
+   "keyPdf": "/files/exams/ch2-v1-key.pdf",
+   "examDocx": "/files/exams/ch2-v1.docx",
+   "keyDocx": "/files/exams/ch2-v1-key.docx"
+  },
+  "sizes": {
+   "examPdf": 326226,
+   "keyPdf": 34802,
+   "examDocx": 10828,
+   "keyDocx": 11446
+  }
+ },
+ {
+  "id": "ch2-v2",
+  "title": "فصل 2: عددهای حقیقی — نمونه دوم (متوسط)",
+  "kind": "chapter",
+  "chapters": [
+   "real-numbers"
+  ],
+  "level": "متوسط",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch2-v2.pdf",
+   "keyPdf": "/files/exams/ch2-v2-key.pdf",
+   "examDocx": "/files/exams/ch2-v2.docx",
+   "keyDocx": "/files/exams/ch2-v2-key.docx"
+  },
+  "sizes": {
+   "examPdf": 326666,
+   "keyPdf": 35083,
+   "examDocx": 10838,
+   "keyDocx": 11425
+  }
+ },
+ {
+  "id": "ch2-v3",
+  "title": "فصل 2: عددهای حقیقی — نمونه سوم (چالشی)",
+  "kind": "chapter",
+  "chapters": [
+   "real-numbers"
+  ],
+  "level": "چالشی",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch2-v3.pdf",
+   "keyPdf": "/files/exams/ch2-v3-key.pdf",
+   "examDocx": "/files/exams/ch2-v3.docx",
+   "keyDocx": "/files/exams/ch2-v3-key.docx"
+  },
+  "sizes": {
+   "examPdf": 326843,
+   "keyPdf": 33644,
+   "examDocx": 10888,
+   "keyDocx": 11443
+  }
+ },
+ {
+  "id": "ch3-v1",
+  "title": "فصل 3: استدلال و اثبات در هندسه — نمونه اول (مقدماتی)",
+  "kind": "chapter",
+  "chapters": [
+   "geometry-reasoning"
+  ],
+  "level": "مقدماتی",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch3-v1.pdf",
+   "keyPdf": "/files/exams/ch3-v1-key.pdf",
+   "examDocx": "/files/exams/ch3-v1.docx",
+   "keyDocx": "/files/exams/ch3-v1-key.docx"
+  },
+  "sizes": {
+   "examPdf": 329780,
+   "keyPdf": 38943,
+   "examDocx": 11041,
+   "keyDocx": 11798
+  }
+ },
+ {
+  "id": "ch3-v2",
+  "title": "فصل 3: استدلال و اثبات در هندسه — نمونه دوم (متوسط)",
+  "kind": "chapter",
+  "chapters": [
+   "geometry-reasoning"
+  ],
+  "level": "متوسط",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch3-v2.pdf",
+   "keyPdf": "/files/exams/ch3-v2-key.pdf",
+   "examDocx": "/files/exams/ch3-v2.docx",
+   "keyDocx": "/files/exams/ch3-v2-key.docx"
+  },
+  "sizes": {
+   "examPdf": 329512,
+   "keyPdf": 37829,
+   "examDocx": 11086,
+   "keyDocx": 11766
+  }
+ },
+ {
+  "id": "ch3-v3",
+  "title": "فصل 3: استدلال و اثبات در هندسه — نمونه سوم (چالشی)",
+  "kind": "chapter",
+  "chapters": [
+   "geometry-reasoning"
+  ],
+  "level": "چالشی",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch3-v3.pdf",
+   "keyPdf": "/files/exams/ch3-v3-key.pdf",
+   "examDocx": "/files/exams/ch3-v3.docx",
+   "keyDocx": "/files/exams/ch3-v3-key.docx"
+  },
+  "sizes": {
+   "examPdf": 329686,
+   "keyPdf": 38853,
+   "examDocx": 11085,
+   "keyDocx": 11813
+  }
+ },
+ {
+  "id": "ch4-v1",
+  "title": "فصل 4: توان و ریشه — نمونه اول (مقدماتی)",
+  "kind": "chapter",
+  "chapters": [
+   "power-root"
+  ],
+  "level": "مقدماتی",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch4-v1.pdf",
+   "keyPdf": "/files/exams/ch4-v1-key.pdf",
+   "examDocx": "/files/exams/ch4-v1.docx",
+   "keyDocx": "/files/exams/ch4-v1-key.docx"
+  },
+  "sizes": {
+   "examPdf": 326544,
+   "keyPdf": 34939,
+   "examDocx": 10716,
+   "keyDocx": 11239
+  }
+ },
+ {
+  "id": "ch4-v2",
+  "title": "فصل 4: توان و ریشه — نمونه دوم (متوسط)",
+  "kind": "chapter",
+  "chapters": [
+   "power-root"
+  ],
+  "level": "متوسط",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch4-v2.pdf",
+   "keyPdf": "/files/exams/ch4-v2-key.pdf",
+   "examDocx": "/files/exams/ch4-v2.docx",
+   "keyDocx": "/files/exams/ch4-v2-key.docx"
+  },
+  "sizes": {
+   "examPdf": 326658,
+   "keyPdf": 33206,
+   "examDocx": 10632,
+   "keyDocx": 11082
+  }
+ },
+ {
+  "id": "ch4-v3",
+  "title": "فصل 4: توان و ریشه — نمونه سوم (چالشی)",
+  "kind": "chapter",
+  "chapters": [
+   "power-root"
+  ],
+  "level": "چالشی",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch4-v3.pdf",
+   "keyPdf": "/files/exams/ch4-v3-key.pdf",
+   "examDocx": "/files/exams/ch4-v3.docx",
+   "keyDocx": "/files/exams/ch4-v3-key.docx"
+  },
+  "sizes": {
+   "examPdf": 326284,
+   "keyPdf": 34282,
+   "examDocx": 10643,
+   "keyDocx": 11167
+  }
+ },
+ {
+  "id": "ch5-v1",
+  "title": "فصل 5: عبارت‌های جبری — نمونه اول (مقدماتی)",
+  "kind": "chapter",
+  "chapters": [
+   "algebraic-expressions"
+  ],
+  "level": "مقدماتی",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch5-v1.pdf",
+   "keyPdf": "/files/exams/ch5-v1-key.pdf",
+   "examDocx": "/files/exams/ch5-v1.docx",
+   "keyDocx": "/files/exams/ch5-v1-key.docx"
+  },
+  "sizes": {
+   "examPdf": 325609,
+   "keyPdf": 34698,
+   "examDocx": 10737,
+   "keyDocx": 11467
+  }
+ },
+ {
+  "id": "ch5-v2",
+  "title": "فصل 5: عبارت‌های جبری — نمونه دوم (متوسط)",
+  "kind": "chapter",
+  "chapters": [
+   "algebraic-expressions"
+  ],
+  "level": "متوسط",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch5-v2.pdf",
+   "keyPdf": "/files/exams/ch5-v2-key.pdf",
+   "examDocx": "/files/exams/ch5-v2.docx",
+   "keyDocx": "/files/exams/ch5-v2-key.docx"
+  },
+  "sizes": {
+   "examPdf": 326449,
+   "keyPdf": 34341,
+   "examDocx": 10753,
+   "keyDocx": 11340
+  }
+ },
+ {
+  "id": "ch5-v3",
+  "title": "فصل 5: عبارت‌های جبری — نمونه سوم (چالشی)",
+  "kind": "chapter",
+  "chapters": [
+   "algebraic-expressions"
+  ],
+  "level": "چالشی",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch5-v3.pdf",
+   "keyPdf": "/files/exams/ch5-v3-key.pdf",
+   "examDocx": "/files/exams/ch5-v3.docx",
+   "keyDocx": "/files/exams/ch5-v3-key.docx"
+  },
+  "sizes": {
+   "examPdf": 326128,
+   "keyPdf": 33689,
+   "examDocx": 10778,
+   "keyDocx": 11344
+  }
+ },
+ {
+  "id": "ch6-v1",
+  "title": "فصل 6: خط و معادله‌های خطی — نمونه اول (مقدماتی)",
+  "kind": "chapter",
+  "chapters": [
+   "linear-equations"
+  ],
+  "level": "مقدماتی",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch6-v1.pdf",
+   "keyPdf": "/files/exams/ch6-v1-key.pdf",
+   "examDocx": "/files/exams/ch6-v1.docx",
+   "keyDocx": "/files/exams/ch6-v1-key.docx"
+  },
+  "sizes": {
+   "examPdf": 329087,
+   "keyPdf": 38291,
+   "examDocx": 10850,
+   "keyDocx": 11588
+  }
+ },
+ {
+  "id": "ch6-v2",
+  "title": "فصل 6: خط و معادله‌های خطی — نمونه دوم (متوسط)",
+  "kind": "chapter",
+  "chapters": [
+   "linear-equations"
+  ],
+  "level": "متوسط",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch6-v2.pdf",
+   "keyPdf": "/files/exams/ch6-v2-key.pdf",
+   "examDocx": "/files/exams/ch6-v2.docx",
+   "keyDocx": "/files/exams/ch6-v2-key.docx"
+  },
+  "sizes": {
+   "examPdf": 328852,
+   "keyPdf": 37862,
+   "examDocx": 10829,
+   "keyDocx": 11592
+  }
+ },
+ {
+  "id": "ch6-v3",
+  "title": "فصل 6: خط و معادله‌های خطی — نمونه سوم (چالشی)",
+  "kind": "chapter",
+  "chapters": [
+   "linear-equations"
+  ],
+  "level": "چالشی",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch6-v3.pdf",
+   "keyPdf": "/files/exams/ch6-v3-key.pdf",
+   "examDocx": "/files/exams/ch6-v3.docx",
+   "keyDocx": "/files/exams/ch6-v3-key.docx"
+  },
+  "sizes": {
+   "examPdf": 325655,
+   "keyPdf": 35937,
+   "examDocx": 10725,
+   "keyDocx": 11432
+  }
+ },
+ {
+  "id": "ch7-v1",
+  "title": "فصل 7: عبارت‌های گویا — نمونه اول (مقدماتی)",
+  "kind": "chapter",
+  "chapters": [
+   "rational-expressions"
+  ],
+  "level": "مقدماتی",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch7-v1.pdf",
+   "keyPdf": "/files/exams/ch7-v1-key.pdf",
+   "examDocx": "/files/exams/ch7-v1.docx",
+   "keyDocx": "/files/exams/ch7-v1-key.docx"
+  },
+  "sizes": {
+   "examPdf": 327570,
+   "keyPdf": 57216,
+   "examDocx": 10721,
+   "keyDocx": 11364
+  }
+ },
+ {
+  "id": "ch7-v2",
+  "title": "فصل 7: عبارت‌های گویا — نمونه دوم (متوسط)",
+  "kind": "chapter",
+  "chapters": [
+   "rational-expressions"
+  ],
+  "level": "متوسط",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch7-v2.pdf",
+   "keyPdf": "/files/exams/ch7-v2-key.pdf",
+   "examDocx": "/files/exams/ch7-v2.docx",
+   "keyDocx": "/files/exams/ch7-v2-key.docx"
+  },
+  "sizes": {
+   "examPdf": 327912,
+   "keyPdf": 57272,
+   "examDocx": 10732,
+   "keyDocx": 11383
+  }
+ },
+ {
+  "id": "ch7-v3",
+  "title": "فصل 7: عبارت‌های گویا — نمونه سوم (چالشی)",
+  "kind": "chapter",
+  "chapters": [
+   "rational-expressions"
+  ],
+  "level": "چالشی",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch7-v3.pdf",
+   "keyPdf": "/files/exams/ch7-v3-key.pdf",
+   "examDocx": "/files/exams/ch7-v3.docx",
+   "keyDocx": "/files/exams/ch7-v3-key.docx"
+  },
+  "sizes": {
+   "examPdf": 350013,
+   "keyPdf": 58041,
+   "examDocx": 10793,
+   "keyDocx": 11378
+  }
+ },
+ {
+  "id": "ch8-v1",
+  "title": "فصل 8: حجم و مساحت — نمونه اول (مقدماتی)",
+  "kind": "chapter",
+  "chapters": [
+   "volume-area"
+  ],
+  "level": "مقدماتی",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch8-v1.pdf",
+   "keyPdf": "/files/exams/ch8-v1-key.pdf",
+   "examDocx": "/files/exams/ch8-v1.docx",
+   "keyDocx": "/files/exams/ch8-v1-key.docx"
+  },
+  "sizes": {
+   "examPdf": 354059,
+   "keyPdf": 66654,
+   "examDocx": 10834,
+   "keyDocx": 11472
+  }
+ },
+ {
+  "id": "ch8-v2",
+  "title": "فصل 8: حجم و مساحت — نمونه دوم (متوسط)",
+  "kind": "chapter",
+  "chapters": [
+   "volume-area"
+  ],
+  "level": "متوسط",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch8-v2.pdf",
+   "keyPdf": "/files/exams/ch8-v2-key.pdf",
+   "examDocx": "/files/exams/ch8-v2.docx",
+   "keyDocx": "/files/exams/ch8-v2-key.docx"
+  },
+  "sizes": {
+   "examPdf": 352800,
+   "keyPdf": 66598,
+   "examDocx": 10738,
+   "keyDocx": 11451
+  }
+ },
+ {
+  "id": "ch8-v3",
+  "title": "فصل 8: حجم و مساحت — نمونه سوم (چالشی)",
+  "kind": "chapter",
+  "chapters": [
+   "volume-area"
+  ],
+  "level": "چالشی",
+  "duration": 45,
+  "total": 20,
+  "count": 10,
+  "scopeStatus": "verified-notes",
+  "scopeNote": "دامنه مطابق جزوهٔ همین پروژه برای همان فصل.",
+  "files": {
+   "examPdf": "/files/exams/ch8-v3.pdf",
+   "keyPdf": "/files/exams/ch8-v3-key.pdf",
+   "examDocx": "/files/exams/ch8-v3.docx",
+   "keyDocx": "/files/exams/ch8-v3-key.docx"
+  },
+  "sizes": {
+   "examPdf": 353245,
+   "keyPdf": 65935,
+   "examDocx": 10820,
+   "keyDocx": 11488
+  }
+ },
+ {
+  "id": "mix-1",
+  "title": "نمونه آزمون ترکیبی ۱: مجموعه‌ها، عددهای حقیقی، توان و ریشه",
+  "kind": "combined",
+  "chapters": [
+   "sets",
+   "real-numbers",
+   "power-root"
+  ],
+  "level": "ترکیبی",
+  "duration": 60,
+  "total": 20,
+  "count": 12,
+  "scopeStatus": "needs-review",
+  "scopeNote": "دامنهٔ ترکیبی انتخابی است و به برنامهٔ رسمی تکیه ندارد.",
+  "files": {
+   "examPdf": "/files/exams/mix-1.pdf",
+   "keyPdf": "/files/exams/mix-1-key.pdf",
+   "examDocx": "/files/exams/mix-1.docx",
+   "keyDocx": "/files/exams/mix-1-key.docx"
+  },
+  "sizes": {
+   "examPdf": 391193,
+   "keyPdf": 38632,
+   "examDocx": 11089,
+   "keyDocx": 11737
+  }
+ },
+ {
+  "id": "mix-2",
+  "title": "نمونه آزمون ترکیبی ۲: عبارت‌های جبری، خط و معادله‌های خطی، عبارت‌های گویا",
+  "kind": "combined",
+  "chapters": [
+   "algebraic-expressions",
+   "linear-equations",
+   "rational-expressions"
+  ],
+  "level": "ترکیبی",
+  "duration": 60,
+  "total": 20,
+  "count": 12,
+  "scopeStatus": "needs-review",
+  "scopeNote": "دامنهٔ ترکیبی انتخابی است و به برنامهٔ رسمی تکیه ندارد.",
+  "files": {
+   "examPdf": "/files/exams/mix-2.pdf",
+   "keyPdf": "/files/exams/mix-2-key.pdf",
+   "examDocx": "/files/exams/mix-2.docx",
+   "keyDocx": "/files/exams/mix-2-key.docx"
+  },
+  "sizes": {
+   "examPdf": 391616,
+   "keyPdf": 62057,
+   "examDocx": 11069,
+   "keyDocx": 11880
+  }
+ },
+ {
+  "id": "mix-3",
+  "title": "نمونه آزمون ترکیبی ۳: استدلال و اثبات در هندسه، توان و ریشه، حجم و مساحت",
+  "kind": "combined",
+  "chapters": [
+   "geometry-reasoning",
+   "power-root",
+   "volume-area"
+  ],
+  "level": "ترکیبی",
+  "duration": 60,
+  "total": 20,
+  "count": 12,
+  "scopeStatus": "needs-review",
+  "scopeNote": "دامنهٔ ترکیبی انتخابی است و به برنامهٔ رسمی تکیه ندارد.",
+  "files": {
+   "examPdf": "/files/exams/mix-3.pdf",
+   "keyPdf": "/files/exams/mix-3-key.pdf",
+   "examDocx": "/files/exams/mix-3.docx",
+   "keyDocx": "/files/exams/mix-3-key.docx"
+  },
+  "sizes": {
+   "examPdf": 423643,
+   "keyPdf": 71868,
+   "examDocx": 11413,
+   "keyDocx": 12195
+  }
+ },
+ {
+  "id": "term-1",
+  "title": "نمونه آزمون نوبت اول (فصل‌های ۱ تا ۴)",
+  "kind": "term1",
+  "chapters": [
+   "sets",
+   "real-numbers",
+   "geometry-reasoning",
+   "power-root"
+  ],
+  "level": "ترکیبی",
+  "duration": 90,
+  "total": 20,
+  "count": 16,
+  "scopeStatus": "needs-review",
+  "scopeNote": "دامنهٔ نوبت اول (فصل ۱ تا ۴) بر پایهٔ منابع ثانویهٔ آموزشی (مثلاً سری نمونه‌سؤال‌های «نوبت اول فصل ۱ تا ۴») ثبت شده و تأیید رسمی وزارت آموزش و پرورش نشده است؛ پیش از استفادهٔ رسمی با بودجه‌بندی ابلاغی مقایسه شود.",
+  "files": {
+   "examPdf": "/files/exams/term-1.pdf",
+   "keyPdf": "/files/exams/term-1-key.pdf",
+   "examDocx": "/files/exams/term-1.docx",
+   "keyDocx": "/files/exams/term-1-key.docx"
+  },
+  "sizes": {
+   "examPdf": 516413,
+   "keyPdf": 46871,
+   "examDocx": 11821,
+   "keyDocx": 12775
+  }
+ },
+ {
+  "id": "term-2",
+  "title": "نمونه آزمون نوبت دوم (فصل‌های ۵ تا ۸)",
+  "kind": "term2",
+  "chapters": [
+   "algebraic-expressions",
+   "linear-equations",
+   "rational-expressions",
+   "volume-area"
+  ],
+  "level": "ترکیبی",
+  "duration": 90,
+  "total": 20,
+  "count": 16,
+  "scopeStatus": "needs-review",
+  "scopeNote": "در برخی منابع، نوبت دوم کل کتاب را شامل می‌شود؛ این نمونه فقط فصل‌های ۵ تا ۸ را پوشش می‌دهد. برای آزمون کل کتاب از «آزمون جامع پایانی» استفاده کنید. دامنهٔ رسمی تأیید نشده است.",
+  "files": {
+   "examPdf": "/files/exams/term-2.pdf",
+   "keyPdf": "/files/exams/term-2-key.pdf",
+   "examDocx": "/files/exams/term-2.docx",
+   "keyDocx": "/files/exams/term-2-key.docx"
+  },
+  "sizes": {
+   "examPdf": 541223,
+   "keyPdf": 76140,
+   "examDocx": 11440,
+   "keyDocx": 12595
+  }
+ },
+ {
+  "id": "final",
+  "title": "نمونه آزمون جامع پایانی (فصل‌های ۱ تا ۸)",
+  "kind": "final",
+  "chapters": [
+   "sets",
+   "real-numbers",
+   "geometry-reasoning",
+   "power-root",
+   "algebraic-expressions",
+   "linear-equations",
+   "rational-expressions",
+   "volume-area"
+  ],
+  "level": "ترکیبی",
+  "duration": 100,
+  "total": 20,
+  "count": 20,
+  "scopeStatus": "needs-review",
+  "scopeNote": "ساختار این آزمون (۲۰ سؤال، ۲۰ نمره، پوشش همهٔ فصل‌ها) الگویی تقریبی است؛ ساختار رسمی آزمون پایانی از منبع معتبر راستی‌آزمایی نشده و مدعی تأیید رسمی نیست.",
+  "files": {
+   "examPdf": "/files/exams/final.pdf",
+   "keyPdf": "/files/exams/final-key.pdf",
+   "examDocx": "/files/exams/final.docx",
+   "keyDocx": "/files/exams/final-key.docx"
+  },
+  "sizes": {
+   "examPdf": 666212,
+   "keyPdf": 81276,
+   "examDocx": 11937,
+   "keyDocx": 13326
+  }
+ }
+]

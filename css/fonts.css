@@ -1,0 +1,20 @@
+/* فونت‌های ارائه‌شده توسط کاربر + سیستم تایپوگرافی
+   ─ هر سه فونت فقط در وزن بسیار سنگین (Black) موجودند و برای متن بلند مناسب نیستند؛ بنابراین:
+   Vazirmatn (قبلاً در پروژه) → متن جزوه و پاراگراف‌ها و فرم‌ها
+   DigiCraft → تیترهای اصلی بزرگ (h1)          Fedra → زیرتیترها و عنوان کارت‌ها (h2/h3)
+   Hamrah → برچسب‌های کوتاه رابط (منو، دکمه، تب، چیپ)
+   نویسه‌های ناموجود در فونت‌ها (مثل — و ریاضی) از Vazirmatn/فونت سیستم گرفته می‌شوند. */
+@font-face{font-family:Hamrah;src:url(../assets/fonts/Hamrah.woff2) format("woff2"),url(../assets/fonts/Hamrah.ttf) format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:DigiCraft;src:url(../assets/fonts/Digi_Craft_Ultra_Black.woff2) format("woff2"),url(../assets/fonts/Digi_Craft_Ultra_Black.ttf) format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:Fedra;src:url(../assets/fonts/Fedra_arabic.woff2) format("woff2"),url(../assets/fonts/Fedra_arabic.ttf) format("truetype");font-weight:400;font-style:normal;font-display:swap}
+:root{--f-body:Vazirmatn,Tahoma,"Segoe UI",sans-serif;--f-display:DigiCraft,Fedra,Vazirmatn,Tahoma,sans-serif;--f-head:Fedra,Vazirmatn,Tahoma,sans-serif;--f-ui:Hamrah,Vazirmatn,Tahoma,sans-serif;--f-math:"Cambria Math","Latin Modern Math",Georgia,serif}
+h1,.hero h1{font-family:var(--f-display);font-weight:400;font-synthesis:none;letter-spacing:0}
+h2,h3,.brand,.brand b,.sec,.card h3,.vcard h3,.gi h3,.qc b{font-family:var(--f-head);font-weight:400;font-synthesis:none}
+.mainnav a,.btn,.tabs a,.chip2,.chip,.kicker,.go,.fnav a,.skip,th,legend,.pbtn,.bc{font-family:var(--f-ui);font-weight:400;font-synthesis:none}
+.hero h1{font-size:clamp(36px,5.6vw,92px);line-height:1.3}
+h1{font-size:clamp(28px,4vw,50px);line-height:1.4}
+.mainnav a{font-size:17px}.btn{font-size:17px;letter-spacing:0}
+.body h2,.body h3,.body h4{font-family:var(--f-head);font-weight:400}.body strong{font-family:inherit}
+.num{font-family:DigiCraft,Georgia,serif;font-weight:400}
+.ltr,.katex{font-family:var(--f-math)}.katex{font-family:KaTeX_Main,Times New Roman,serif}
+@media print{.sheet,.sheet *{font-family:var(--f-body)!important;font-weight:400}.sheet h1{font-family:var(--f-head)!important}}

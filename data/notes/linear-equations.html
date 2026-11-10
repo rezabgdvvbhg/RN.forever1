@@ -1,0 +1,199 @@
+<p>بر اساس <strong>کتاب ریاضی نهم</strong> و <strong>کتاب تکمیلی ریاضی نهم</strong></p>
+<hr>
+<h2 id="s0">ساختار فصل در دو کتاب</h2>
+<h3>کتاب درسی ریاضی نهم</h3>
+<p>درس‌های اصلی فصل ۶:</p>
+<ol start="1"><li><strong>معادلهٔ خط و شیب</strong></li><li><strong>رسم خط و پیدا کردن معادلهٔ آن</strong></li><li><strong>حالت‌های خاص خط: خط افقی، خط عمودی، فرم کلی <span class="m">\(ax+by=c\)</span></strong></li><li><strong>دستگاه معادله‌های خطی</strong></li><li><strong>حل دستگاه به روش حذفی، جایگزینی و ترسیمی</strong></li><li><strong>مسائل کاربردی</strong></li></ol>
+<h3>کتاب تکمیلی ریاضی نهم</h3>
+<p>همان سرفصل‌ها، ولی با مطالب عمیق‌تر:</p>
+<ul><li>بررسی هم‌خطی بودن سه نقطه</li><li>معادلهٔ خط از دو نقطه و از نقطه و شیب</li><li>فرم‌های مختلف معادلهٔ خط: <span class="m">\(y=ax+b\)</span>، <span class="m">\(ax+by=c\)</span>، <span class="m">\(\frac{x}{a}+\frac{y}{b}=1\)</span></li><li>خطوط موازی و خطوط هم‌گذر</li><li>دستگاه‌های دارای پارامتر و بررسی تعداد جواب</li><li>مسائل چالشی مانند شمع، آزمون تستی، سکه‌ها و خطوط هم‌گذر</li></ul>
+<hr>
+<h2 id="s1">۱. دستگاه مختصات و نقطه</h2>
+<p>هر نقطه در صفحه با یک زوج مرتب <span class="m">\(\begin{bmatrix}x\\y\end{bmatrix}\)</span> نمایش داده می‌شود.</p>
+<ul><li><span class="m">\(x\)</span>: طول نقطه</li><li><span class="m">\(y\)</span>: عرض نقطه</li></ul>
+<p>مثال:</p>
+<div class="m display">\[A=\begin{bmatrix}2\\3\end{bmatrix}\]</div>
+<p>یعنی نقطه‌ای با طول ۲ و عرض ۳.</p>
+<hr>
+<h2 id="s2">۲. معادلهٔ خط</h2>
+<h3>حالت کلی</h3>
+<p>معادلهٔ بسیاری از خط‌ها را می‌توان به صورت زیر نوشت:</p>
+<div class="m display">\[y=ax+b\]</div>
+<p>که در آن:</p>
+<ul><li><span class="m">\(a\)</span>: <strong>شیب خط</strong></li><li><span class="m">\(b\)</span>: <strong>عرض از مبدأ</strong>؛ یعنی محل برخورد خط با محور <span class="m">\(y\)</span>ها.</li></ul>
+<h3>مثال</h3>
+<div class="m display">\[y=2x-1\]</div>
+<ul><li>شیب: <span class="m">\(2\)</span></li><li>عرض از مبدأ: <span class="m">\(-1\)</span></li><li>محل برخورد با محور <span class="m">\(x\)</span>ها: <span class="m">\(y=0\Rightarrow 2x-1=0\Rightarrow x=\frac12\)</span></li></ul>
+<hr>
+<h2 id="s3">۳. شیب خط</h2>
+<h3>تعریف</h3>
+<p>شیب خط، معیاری از میزان شیب و جهت خط است. اگر دو نقطهٔ <span class="m">\(\begin{bmatrix}x_1\\y_1\end{bmatrix}\)</span> و <span class="m">\(\begin{bmatrix}x_2\\y_2\end{bmatrix}\)</span> روی خط باشند:</p>
+<div class="m display">\[m=\frac{y_2-y_1}{x_2-x_1}\]</div>
+<p>به شرط <span class="m">\(x_1\neq x_2\)</span>.</p>
+<h3>مثال</h3>
+<p>خطی از دو نقطهٔ <span class="m">\(\begin{bmatrix}1\\2\end{bmatrix}\)</span> و <span class="m">\(\begin{bmatrix}3\\6\end{bmatrix}\)</span> می‌گذرد:</p>
+<div class="m display">\[m=\frac{6-2}{3-1}=\frac42=2\]</div>
+<p>معادلهٔ خط:</p>
+<div class="m display">\[y=2x\]</div>
+<h3>نکات مهم دربارهٔ شیب</h3>
+<ul><li>اگر <span class="m">\(a&gt;0\)</span>، خط از چپ به راست <strong>صعودی</strong> است.</li><li>اگر <span class="m">\(a&lt;0\)</span>، خط از چپ به راست <strong>نزولی</strong> است.</li><li>اگر <span class="m">\(a=0\)</span>، خط <strong>افقی</strong> است: <span class="m">\(y=b\)</span>.</li><li>خط <strong>عمودی</strong> <span class="m">\(x=c\)</span> شیب ندارد؛ زیرا <span class="m">\(x_2-x_1=0\)</span>.</li><li>هرچه <span class="m">\(|a|\)</span> بزرگ‌تر باشد، خط شیب‌دارتر است.</li></ul>
+<hr>
+<h2 id="s4">۴. پیدا کردن معادلهٔ خط</h2>
+<h3>۱) با داشتن شیب و عرض از مبدأ</h3>
+<div class="m display">\[y=ax+b\]</div>
+<h3>۲) با داشتن شیب و یک نقطه</h3>
+<p>از فرم نقطه‌شیب استفاده می‌کنیم:</p>
+<div class="m display">\[y-y_1=m(x-x_1)\]</div>
+<p><strong>مثال:</strong> خطی با شیب <span class="m">\(-2\)</span> که از نقطهٔ <span class="m">\((1,3)\)</span> می‌گذرد:</p>
+<div class="m display">\[y-3=-2(x-1)\]</div>
+<div class="m display">\[y=-2x+5\]</div>
+<h3>۳) با داشتن دو نقطه</h3>
+<p>ابتدا شیب را حساب می‌کنیم، سپس از فرم نقطه‌شیب استفاده می‌کنیم.</p>
+<p><strong>مثال:</strong> خطی از <span class="m">\((1,2)\)</span> و <span class="m">\((3,6)\)</span>:</p>
+<div class="m display">\[m=2\]</div>
+<div class="m display">\[y-2=2(x-1)\Rightarrow y=2x\]</div>
+<hr>
+<h2 id="s5">۵. فرم کلی معادلهٔ خط</h2>
+<div class="m display">\[ax+by=c\]</div>
+<p>که <span class="m">\(a,b\)</span> هم‌زمان صفر نیستند.</p>
+<h3>تبدیل به فرم شیب‌ـ‌عرض</h3>
+<p>اگر <span class="m">\(b\neq0\)</span>:</p>
+<div class="m display">\[by=-ax+c\]</div>
+<div class="m display">\[y=-\frac{a}{b}x+\frac{c}{b}\]</div>
+<p>پس:</p>
+<div class="m display">\[\text{شیب}=-\frac{a}{b}\]</div>
+<div class="m display">\[\text{عرض از مبدأ}=\frac{c}{b}\]</div>
+<h3>مثال</h3>
+<div class="m display">\[3x-2y=6\]</div>
+<div class="m display">\[-2y=-3x+6\]</div>
+<div class="m display">\[y=\frac32x-3\]</div>
+<ul><li>شیب: <span class="m">\(\frac32\)</span></li><li>عرض از مبدأ: <span class="m">\(-3\)</span></li><li>طول از مبدأ: <span class="m">\(y=0\Rightarrow x=2\)</span></li></ul>
+<hr>
+<h2 id="s6">۶. خطوط خاص</h2>
+<h3>خط افقی</h3>
+<div class="m display">\[y=b\]</div>
+<p>شیب صفر است. موازی محور <span class="m">\(x\)</span>ها.</p>
+<h3>خط عمودی</h3>
+<div class="m display">\[x=c\]</div>
+<p>شیب تعریف نشده است. موازی محور <span class="m">\(y\)</span>ها.</p>
+<h3>محورهای مختصات</h3>
+<ul><li>محور <span class="m">\(x\)</span>ها: <span class="m">\(y=0\)</span></li><li>محور <span class="m">\(y\)</span>ها: <span class="m">\(x=0\)</span></li></ul>
+<h3>نیم‌سازها</h3>
+<ul><li>نیم‌ساز ربع اول و سوم: <span class="m">\(y=x\)</span></li><li>نیم‌ساز ربع دوم و چهارم: <span class="m">\(y=-x\)</span></li></ul>
+<hr>
+<h2 id="s7">۷. رسم خط</h2>
+<p>برای رسم خط کافی است <strong>دو نقطه</strong> از آن را پیدا و وصل کنیم.</p>
+<h3>مثال: رسم <span class="m">\(y=2x-1\)</span></h3>
+<div class="tw"><table><thead><tr><th><span class="m">\(x\)</span></th><th><span class="m">\(y=2x-1\)</span></th></tr></thead><tbody><tr><td><span class="m">\(0\)</span></td><td><span class="m">\(-1\)</span></td></tr><tr><td><span class="m">\(1\)</span></td><td><span class="m">\(1\)</span></td></tr></tbody></table></div>
+<p>دو نقطهٔ <span class="m">\((0,-1)\)</span> و <span class="m">\((1,1)\)</span> را وصل می‌کنیم.</p>
+<h3>روش دوم: استفاده از شیب و عرض از مبدأ</h3>
+<p>از نقطهٔ <span class="m">\((0,b)\)</span> شروع می‌کنیم. با توجه به شیب:</p>
+<div class="m display">\[m=\frac{\text{تغییر عمودی}}{\text{تغییر افقی}}\]</div>
+<p>حرکت می‌کنیم.</p>
+<hr>
+<h2 id="s8">۸. خطوط موازی</h2>
+<p>دو خط موازی‌اند اگر <strong>شیب برابر</strong> داشته باشند.</p>
+<div class="m display">\[y=mx+b_1,\quad y=mx+b_2\]</div>
+<p>اگر <span class="m">\(b_1\neq b_2\)</span>، دو خط موازی و متمایزند. اگر <span class="m">\(b_1=b_2\)</span>، دو خط بر هم منطبق‌اند.</p>
+<h3>مثال</h3>
+<div class="m display">\[y=2x+1,\quad y=2x-3\]</div>
+<p>موازی‌اند.</p>
+<h3>خط موازی با یک خط داده‌شده</h3>
+<p>خطی موازی <span class="m">\(y=2x+1\)</span> و گذرنده از <span class="m">\((0,3)\)</span>:</p>
+<div class="m display">\[y=2x+3\]</div>
+<hr>
+<h2 id="s9">۹. دستگاه معادله‌های خطی</h2>
+<p>دستگاه دو معادلهٔ خطی:</p>
+<div class="m display">\[\begin{cases} a_1x+b_1y=c_1\ a_2x+b_2y=c_2 \end{cases}\]</div>
+<h3>حالت‌های جواب</h3>
+<ol start="1"><li><strong>یک جواب یکتا:</strong> دو خط یکدیگر را در یک نقطه قطع می‌کنند؛ شیب‌ها متفاوت‌اند.</li><li><strong>بی‌شمار جواب:</strong> دو خط بر هم منطبق‌اند؛ معادله‌ها مضرب یکدیگرند.</li><li><strong>بدون جواب:</strong> دو خط موازی‌اند؛ شیب‌ها برابر و عرض از مبدأها متفاوت‌اند.</li></ol>
+<hr>
+<h2 id="s10">۱۰. روش‌های حل دستگاه</h2>
+<h3>۱) روش حذفی</h3>
+<p>یکی از متغیرها را با جمع یا تفریق معادله‌ها حذف می‌کنیم.</p>
+<p><strong>مثال:</strong></p>
+<div class="m display">\[\begin{cases} x-y=1\ x+y=3 \end{cases}\]</div>
+<p>با جمع:</p>
+<div class="m display">\[2x=4\Rightarrow x=2\]</div>
+<div class="m display">\[2+y=3\Rightarrow y=1\]</div>
+<p>جواب: <span class="m">\((2,1)\)</span></p>
+<h3>۲) روش جایگزینی</h3>
+<p>از یکی از معادله‌ها یک متغیر را بر حسب دیگری می‌نویسیم و در معادلهٔ دیگر قرار می‌دهیم.</p>
+<p><strong>مثال:</strong></p>
+<div class="m display">\[\begin{cases} y=2x-3\ 2(x+y)=24 \end{cases}\]</div>
+<div class="m display">\[2(x+2x-3)=24\]</div>
+<div class="m display">\[6x-6=24\Rightarrow x=5\]</div>
+<div class="m display">\[y=2(5)-3=7\]</div>
+<h3>۳) روش ترسیمی</h3>
+<p>هر دو خط را رسم می‌کنیم؛ نقطهٔ برخورد، جواب دستگاه است.</p>
+<hr>
+<h2 id="s11">۱۱. مسائل کاربردی</h2>
+<h3>مثال ۱: هزینهٔ اینترنت</h3>
+<p>هزینهٔ اشتراک اول:</p>
+<div class="m display">\[y=3000+2000x\]</div>
+<p>هزینهٔ اشتراک دوم:</p>
+<div class="m display">\[y=3000x\]</div>
+<p>نقطهٔ برخورد دو خط، ساعت استفاده‌ای است که هزینه‌ها برابر می‌شود:</p>
+<div class="m display">\[3000+2000x=3000x\]</div>
+<div class="m display">\[x=3\]</div>
+<p>پس برای ۳ ساعت، هزینه‌ها برابر است.</p>
+<h3>مثال ۲: طول فنر</h3>
+<div class="m display">\[y=0/8x+10\]</div>
+<p>اگر وزنهٔ ۵ کیلوگرمی وصل شود:</p>
+<div class="m display">\[y=0/8(5)+10=14\]</div>
+<p>طول فنر ۱۴ سانتی‌متر می‌شود.</p>
+<h3>مثال ۳: مستطیل</h3>
+<p>«طول مستطیل از دو برابر عرض آن ۳ سانتی‌متر کمتر است و محیط ۲۴ است.»</p>
+<div class="m display">\[y=2x-3\]</div>
+<div class="m display">\[2(x+y)=24\]</div>
+<p>با جایگذاری:</p>
+<div class="m display">\[2(x+2x-3)=24\Rightarrow x=5,\quad y=7\]</div>
+<p>عرض ۵ و طول ۷.</p>
+<hr>
+<h2 id="s12">۱۲. بخش‌های تکمیلی کتاب تکمیلی</h2>
+<h3>الف) هم‌خطی بودن سه نقطه</h3>
+<p>سه نقطه <span class="m">\(A,B,C\)</span> هم‌خط‌اند اگر شیب <span class="m">\(AB\)</span> با شیب <span class="m">\(BC\)</span> برابر باشد:</p>
+<div class="m display">\[\frac{y_B-y_A}{x_B-x_A}=\frac{y_C-y_B}{x_C-x_B}\]</div>
+<h3>ب) فرم طول‌ـ‌عرض</h3>
+<p>اگر خط محور <span class="m">\(x\)</span>ها را در <span class="m">\(a\)</span> و محور <span class="m">\(y\)</span>ها را در <span class="m">\(b\)</span> قطع کند:</p>
+<div class="m display">\[\frac{x}{a}+\frac{y}{b}=1\]</div>
+<p>به شرط <span class="m">\(a,b\neq0\)</span>.</p>
+<h3>ج) خطوط هم‌گذر</h3>
+<p>اگر چند خط در یک نقطه مشترک باشند، می‌توان معادلهٔ آن‌ها را به صورت خانواده‌ای از خطوط نوشت. مثال از کتاب تکمیلی:</p>
+<div class="m display">\[(2x+y+2)m+(3y-x+7)n+(5x-2y+10)=0\]</div>
+<p>با تغییر <span class="m">\(m,n\)</span> خطوط مختلفی به دست می‌آید که همگی از یک نقطه می‌گذرند.</p>
+<h3>د) دستگاه با پارامتر</h3>
+<p>مثال:</p>
+<div class="m display">\[\begin{cases} 3x-2y=k\ kx+3y=1395 \end{cases}\]</div>
+<p>برای اینکه دستگاه <strong>جواب نداشته باشد</strong>، شیب دو خط باید برابر و عرض از مبدأها متفاوت باشد:</p>
+<div class="m display">\[\frac32=-\frac{k}{3}\Rightarrow k=-\frac92\]</div>
+<p>در این حالت دو خط موازی‌اند و دستگاه جواب ندارد.</p>
+<h3>ه) مسائل چالشی</h3>
+<ul><li><strong>مسئلهٔ شمع:</strong> نمودار طول شمع بر حسب زمان، خطی نزولی است. با روشن کردن دو سر شمع، نمودارها تغییر می‌کنند.</li><li><strong>مسئلهٔ آزمون تستی:</strong> ۴۰ سؤال، پاسخ درست <span class="m">\(+0/5\)</span>، نادرست <span class="m">\(-1\)</span>، نمرهٔ نهایی <span class="m">\(2\)</span>. با دستگاه معادله‌ها تعداد پاسخ‌های درست و نادرست به دست می‌آید.</li><li><strong>مسئلهٔ سکه‌ها:</strong> با تشکیل دستگاه، تعداد سکه‌های اولیهٔ احمد و محمود محاسبه می‌شود.</li><li><strong>پنج خط هم‌گذر:</strong> نوشتن معادلهٔ پنج خط که همگی از یک نقطه بگذرند.</li></ul>
+<hr>
+<h2 id="s13">جدول خلاصهٔ فرمول‌ها</h2>
+<div class="tw"><table><thead><tr><th>موضوع</th><th>فرمول</th></tr></thead><tbody><tr><td>معادلهٔ خط</td><td><span class="m">\(y=mx+b\)</span></td></tr><tr><td>شیب از دو نقطه</td><td><span class="m">\(m=\frac{y_2-y_1}{x_2-x_1}\)</span></td></tr><tr><td>فرم نقطه‌شیب</td><td><span class="m">\(y-y_1=m(x-x_1)\)</span></td></tr><tr><td>فرم کلی</td><td><span class="m">\(ax+by=c\)</span></td></tr><tr><td>شیب از فرم کلی</td><td><span class="m">\(m=-\frac{a}{b}\)</span></td></tr><tr><td>عرض از مبدأ</td><td><span class="m">\(b\)</span> در <span class="m">\(y=mx+b\)</span></td></tr><tr><td>طول از مبدأ</td><td><span class="m">\(y=0\Rightarrow x=-\frac{b}{m}\)</span></td></tr><tr><td>خط افقی</td><td><span class="m">\(y=b\)</span></td></tr><tr><td>خط عمودی</td><td><span class="m">\(x=c\)</span></td></tr><tr><td>خطوط موازی</td><td>شیب برابر</td></tr><tr><td>یک جواب دستگاه</td><td>شیب‌ها متفاوت</td></tr><tr><td>بدون جواب</td><td>شیب برابر، عرض از مبدأ متفاوت</td></tr><tr><td>بی‌شمار جواب</td><td>دو معادله مضرب یکدیگر</td></tr></tbody></table></div>
+<hr>
+<h2 id="s14">خطاهای رایج</h2>
+<ol start="1"><li><strong>شیب خط عمودی تعریف نشده است؛</strong> آن را صفر نگیرید.</li><li><strong>شیب خط افقی صفر است؛</strong> نه تعریف‌نشده.</li><li><strong>در فرم <span class="m">\(ax+by=c\)</span>، شیب برابر <span class="m">\(-\frac{a}{b}\)</span> است، نه <span class="m">\(\frac{a}{b}\)</span>.</strong></li><li><strong>برای خطوط موازی، فقط شیب برابر کافی نیست؛</strong> اگر عرض از مبدأ هم برابر باشد، دو خط منطبق‌اند.</li><li><strong>در دستگاه بدون جواب، شیب‌ها برابرند ولی خطوط متمایزند.</strong></li><li><strong>در حل دستگاه با روش حذفی، علامت‌ها را دقیق کنترل کنید.</strong></li></ol>
+<hr>
+<h2 id="s15">تمرین‌های نمونه با پاسخ</h2>
+<ol start="1"><li>شیب و عرض از مبدأ خط <span class="m">\(y=-3x+2\)</span> را بنویسید.</li></ol>
+<p><strong>پاسخ:</strong> شیب <span class="m">\(-3\)</span>، عرض از مبدأ <span class="m">\(2\)</span>.</p>
+<ol start="2"><li>معادلهٔ خطی را بنویسید که شیب آن <span class="m">\(2\)</span> و عرض از مبدأ آن <span class="m">\(-1\)</span> باشد.</li></ol>
+<p><strong>پاسخ:</strong></p>
+<div class="m display">\[y=2x-1\]</div>
+<ol start="3"><li>خطی از <span class="m">\((1,3)\)</span> می‌گذرد و شیب آن <span class="m">\(-2\)</span> است. معادلهٔ آن را بنویسید.</li></ol>
+<p><strong>پاسخ:</strong></p>
+<div class="m display">\[y-3=-2(x-1)\Rightarrow y=-2x+5\]</div>
+<ol start="4"><li>دستگاه زیر را حل کنید:</li></ol>
+<div class="m display">\[\begin{cases} x-y=1\ x+y=3 \end{cases}\]</div>
+<p><strong>پاسخ:</strong> <span class="m">\((2,1)\)</span></p>
+<ol start="5"><li>آیا دستگاه زیر جواب دارد؟</li></ol>
+<div class="m display">\[\begin{cases} y=2x+1\ y=2x+3 \end{cases}\]</div>
+<p><strong>پاسخ:</strong> خیر؛ دو خط موازی‌اند.</p>
+<ol start="6"><li>خط <span class="m">\(3x-2y=6\)</span> را به فرم <span class="m">\(y=mx+b\)</span> بنویسید.</li></ol>
+<p><strong>پاسخ:</strong></p>
+<div class="m display">\[y=\frac32x-3\]</div>
+<hr>
+<p>این جزوه بر اساس محتوای فصل ۶ <strong>کتاب ریاضی نهم</strong> و <strong>کتاب تکمیلی ریاضی نهم</strong> تهیه شده است.</p>

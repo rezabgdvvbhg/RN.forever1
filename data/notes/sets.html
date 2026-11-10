@@ -1,0 +1,158 @@
+<p>بر اساس کتاب ریاضی نهم و کتاب تکمیلی ریاضی نهم</p>
+<hr>
+<h2 id="s0">درس اول: معرفی مجموعه</h2>
+<h3>۱. تعریف مجموعه</h3>
+<p>مجموعه، دسته‌ای از اشیای <strong>مشخص</strong> و <strong>متمایز</strong> است. اعضای مجموعه را داخل دو آکولاد <code>{ }</code> می‌نویسیم.</p>
+<ul><li>اگر <span class="m">\(a\)</span> عضو مجموعه <span class="m">\(A\)</span> باشد، می‌نویسیم: <span class="m">\(a \in A\)</span></li><li>اگر <span class="m">\(a\)</span> عضو مجموعه <span class="m">\(A\)</span> نباشد، می‌نویسیم: <span class="m">\(a \notin A\)</span></li></ul>
+<h3>مثال</h3>
+<div class="m display">\[A=\{2,3,5\}\]</div>
+<ul><li><span class="m">\(2 \in A\)</span></li><li><span class="m">\(4 \notin A\)</span></li></ul>
+<h3>نکات مهم</h3>
+<ul><li>ترتیب نوشتن اعضا مهم نیست: <span class="m">\(\{2,3,5\}=\{5,2,3\}\)</span></li><li>تکرار عضو، مجموعه جدید نمی‌سازد: <span class="m">\(\{3,3,4\}=\{3,4\}\)</span></li><li>مجموعه تهی: مجموعه‌ای که هیچ عضوی ندارد.</li></ul>
+<p>نمایش: <span class="m">\(\varnothing\)</span> یا <span class="m">\(\{ \}\)</span></p>
+<h3>مثال از کتاب</h3>
+<p>شمارنده‌های طبیعی عدد ۶۰:</p>
+<div class="m display">\[1,2,3,4,5,6,10,12,15,20,30,60\]</div>
+<ul><li>شمارنده‌های اول ۶۰: <span class="m">\(\{2,3,5\}\)</span></li><li>شمارنده‌های مرکب ۶۰: <span class="m">\(\{4,6,10,12,15,20,30,60\}\)</span></li><li>شمارنده‌هایی که نه اول‌اند و نه مرکب: <span class="m">\(\{1\}\)</span></li><li>شمارنده‌های دورقمی ۶۰: <span class="m">\(\{10,12,15,20,30,60\}\)</span></li></ul>
+<h3>نمایش با نمودار ون</h3>
+<p>مجموعه را می‌توان با منحنی بسته نمایش داد. مثال: مجموعه <span class="m">\(\{1,2,3,4\}\)</span> با نمودار ون.</p>
+<h3>زنجیر و پادزنجیر (کتاب تکمیلی)</h3>
+<ul><li><strong>زنجیر</strong>: مجموعه‌ای از زیرمجموعه‌ها که بین هر دو عضو آن رابطهٔ <span class="m">\(\subseteq\)</span> برقرار باشد.</li></ul>
+<p>مثال:</p>
+<div class="m display">\[\{\{1\},\{1,3\},\{1,3,4\}\}\]</div>
+<ul><li><strong>پادزنجیر</strong>: مجموعه‌ای از زیرمجموعه‌ها که هیچ دو عضوی زیرمجموعهٔ هم نباشند.</li></ul>
+<p>مثال:</p>
+<div class="m display">\[\{\{1\},\{2,3\},\{2,4\}\}\]</div>
+<h3>افراز</h3>
+<p>اگر همهٔ اعضای یک مجموعه را به چند زیرمجموعهٔ <strong>ناتهی</strong>، <strong>جدا از هم</strong> تقسیم کنیم، آن مجموعه افراز شده است. مثال:</p>
+<div class="m display">\[A=\{1,2,3,4,5\}\]</div>
+<p>افراز: <span class="m">\(\{1,2\},\{3,4\},\{5\}\)</span></p>
+<hr>
+<h2 id="s1">درس دوم: مجموعه‌های برابر و زیرمجموعه</h2>
+<h3>۱. دو مجموعهٔ برابر</h3>
+<p>دو مجموعه <span class="m">\(A\)</span> و <span class="m">\(B\)</span> برابرند اگر هر عضو <span class="m">\(A\)</span> عضو <span class="m">\(B\)</span> باشد و هر عضو <span class="m">\(B\)</span> عضو <span class="m">\(A\)</span> باشد.</p>
+<div class="m display">\[A=B\]</div>
+<h3>مثال</h3>
+<div class="m display">\[A=\{1,2,3\},\quad B=\{3,1,2\}\]</div>
+<p>پس <span class="m">\(A=B\)</span>.</p>
+<h3>۲. زیرمجموعه</h3>
+<p>اگر هر عضو <span class="m">\(A\)</span> عضو <span class="m">\(B\)</span> باشد، می‌گوییم <span class="m">\(A\)</span> زیرمجموعهٔ <span class="m">\(B\)</span> است:</p>
+<div class="m display">\[A \subseteq B\]</div>
+<ul><li>هر مجموعه زیرمجموعهٔ خودش است: <span class="m">\(A \subseteq A\)</span></li><li>مجموعه تهی زیرمجموعهٔ هر مجموعه است: <span class="m">\(\varnothing \subseteq A\)</span></li></ul>
+<h3>مثال</h3>
+<div class="m display">\[A=\{1,2,3\}\]</div>
+<p>همهٔ زیرمجموعه‌های <span class="m">\(A\)</span>:</p>
+<div class="m display">\[\varnothing,\{1\},\{2\},\{3\},\{1,2\},\{1,3\},\{2,3\},\{1,2,3\}\]</div>
+<p>تعداد زیرمجموعه‌ها: <span class="m">\(2^3=8\)</span></p>
+<h3>نکته</h3>
+<ul><li><span class="m">\(3 \subseteq B\)</span> نادرست است؛ چون ۳ یک عدد است، نه مجموعه.</li><li><span class="m">\(\{3\} \subseteq B\)</span> درست است؛ چون <span class="m">\(\{3\}\)</span> یک مجموعه است.</li></ul>
+<hr>
+<h2 id="s2">درس سوم: نمایش مجموعه‌ها با نمادهای ریاضی</h2>
+<h3>۱. مجموعه‌های اعداد</h3>
+<ul><li>طبیعی: <span class="m">\(\mathbb{N}=\{1,2,3,\dots\}\)</span></li><li>حسابی: <span class="m">\(\mathbb{W}=\{0,1,2,3,\dots\}\)</span></li><li>صحیح: <span class="m">\(\mathbb{Z}=\{\dots,-2,-1,0,1,2,\dots\}\)</span></li><li>گویا: <span class="m">\(\mathbb{Q}=\{\frac{a}{b}\mid a,b\in\mathbb{Z}, b\neq 0\}\)</span></li><li>گنگ: <span class="m">\(\mathbb{Q}'\)</span></li><li>حقیقی: <span class="m">\(\mathbb{R}\)</span></li></ul>
+<p>رابطهٔ زیرمجموعه‌ها:</p>
+<div class="m display">\[\mathbb{N}\subseteq\mathbb{W}\subseteq\mathbb{Z}\subseteq\mathbb{Q}\subseteq\mathbb{R}\]</div>
+<p>و</p>
+<div class="m display">\[\mathbb{Q}\cup\mathbb{Q}'=\mathbb{R},\quad \mathbb{Q}\cap\mathbb{Q}'=\varnothing\]</div>
+<h3>۲. نمایش با شرط</h3>
+<div class="m display">\[A=\{x\in\mathbb{N}\mid 6&lt;x&lt;11\}=\{7,8,9,10\}\]</div>
+<h3>مثال</h3>
+<ul><li>مجموعه اعداد زوج طبیعی:</li></ul>
+<div class="m display">\[E=\{2k\mid k\in\mathbb{N}\}=\{2,4,6,\dots\}\]</div>
+<ul><li>مجموعه اعداد فرد طبیعی:</li></ul>
+<div class="m display">\[O=\{2k-1\mid k\in\mathbb{N}\}=\{1,3,5,\dots\}\]</div>
+<ul><li>\[</li></ul>
+<p>A=\{5n+3\mid n\in\mathbb{N}\}=\{8,13,18,23,\dots\} \]</p>
+<h3>۳. حاصل‌ضرب دکارتی</h3>
+<div class="m display">\[A\times B=\{[x;y]\mid x\in A, y\in B\}\]</div>
+<p>مثال:</p>
+<div class="m display">\[A=\{1,2,3\},\quad B=\{k,t\}\]</div>
+<div class="m display">\[A\times B=\{[1;k],[1;t],[2;k],[2;t],[3;k],[3;t]\}\]</div>
+<p>تعداد اعضا:</p>
+<div class="m display">\[n(A\times B)=n(A)\cdot n(B)\]</div>
+<h3>۴. جمع و ضرب دونه‌بدونه (کتاب تکمیلی)</h3>
+<ul><li>جمع دونه‌بدونه:</li></ul>
+<div class="m display">\[A\oplus B=\{a+b\mid a\in A, b\in B\}\]</div>
+<ul><li>ضرب دونه‌بدونه:</li></ul>
+<div class="m display">\[A\otimes B=\{ab\mid a\in A, b\in B\}\]</div>
+<p>مثال:</p>
+<div class="m display">\[A=\{1,4\},\quad B=\{7,8,9\}\]</div>
+<div class="m display">\[A\oplus B=\{8,9,10,11,12,13\}\]</div>
+<div class="m display">\[A\otimes B=\{7,8,9,28,32,36\}\]</div>
+<hr>
+<h2 id="s3">درس چهارم: اجتماع، اشتراک و تفاضل مجموعه‌ها</h2>
+<h3>۱. اجتماع</h3>
+<div class="m display">\[A\cup B=\{x\mid x\in A \text{ یا } x\in B\}\]</div>
+<p>همهٔ اعضای <span class="m">\(A\)</span> و <span class="m">\(B\)</span>.</p>
+<h3>۲. اشتراک</h3>
+<div class="m display">\[A\cap B=\{x\mid x\in A \text{ و } x\in B\}\]</div>
+<p>اعضای مشترک <span class="m">\(A\)</span> و <span class="m">\(B\)</span>.</p>
+<h3>۳. تفاضل</h3>
+<div class="m display">\[A-B=\{x\mid x\in A \text{ و } x\notin B\}\]</div>
+<p>اعضای <span class="m">\(A\)</span> که در <span class="m">\(B\)</span> نیستند.</p>
+<h3>مثال</h3>
+<div class="m display">\[A=\{1,2,3,4,5,8\},\quad B=\{3,4,5,6,7\}\]</div>
+<div class="m display">\[A\cap B=\{3,4,5\}\]</div>
+<div class="m display">\[A\cup B=\{1,2,3,4,5,6,7,8\}\]</div>
+<div class="m display">\[A-B=\{1,2,8\},\quad B-A=\{6,7\}\]</div>
+<h3>فرمول‌ها</h3>
+<div class="m display">\[n(A\cup B)=n(A)+n(B)-n(A\cap B)\]</div>
+<div class="m display">\[n(A-B)=n(A)-n(A\cap B)\]</div>
+<p>و همیشه:</p>
+<div class="m display">\[A\cap B\subseteq A\subseteq A\cup B\]</div>
+<h3>مثال حل‌شده</h3>
+<p>اگر <span class="m">\(n(A)=12\)</span>، <span class="m">\(n(B)=18\)</span> و <span class="m">\(n(A\cap B)=5\)</span>، آنگاه:</p>
+<div class="m display">\[n(A\cup B)=12+18-5=25\]</div>
+<hr>
+<h2 id="s4">درس پنجم: مجموعه‌ها و احتمال</h2>
+<h3>۱. فضای نمونه و پیشامد</h3>
+<ul><li>مجموعه همهٔ حالت‌های ممکن: <span class="m">\(S\)</span></li><li>پیشامد موردنظر: <span class="m">\(A\)</span></li><li>احتمال:</li></ul>
+<div class="m display">\[P(A)=\frac{n(A)}{n(S)}\]</div>
+<h3>مثال: پرتاب یک تاس</h3>
+<div class="m display">\[S=\{1,2,3,4,5,6\}\]</div>
+<ul><li>پیشامد مضرب ۳ بودن:</li></ul>
+<div class="m display">\[A=\{3,6\},\quad P(A)=\frac{2}{6}=\frac{1}{3}\]</div>
+<ul><li>پیشامد اول بودن:</li></ul>
+<div class="m display">\[B=\{2,3,5\},\quad P(B)=\frac{3}{6}=\frac{1}{2}\]</div>
+<ul><li>پیشامد بزرگ‌تر از ۶:</li></ul>
+<div class="m display">\[C=\varnothing,\quad P(C)=0\]</div>
+<ul><li>پیشامد کمتر از ۷:</li></ul>
+<div class="m display">\[D=S,\quad P(D)=1\]</div>
+<h3>نکته</h3>
+<div class="m display">\[0\le P(A)\le 1\]</div>
+<div class="m display">\[P(\varnothing)=0,\quad P(S)=1\]</div>
+<h3>مثال: پرتاب دو تاس</h3>
+<div class="m display">\[n(S)=36\]</div>
+<p>احتمال اینکه مجموع دو عدد ۷ شود: حالت‌های مطلوب: <span class="m">\((1,6),(2,5),(3,4),(4,3),(5,2),(6,1)\)</span></p>
+<div class="m display">\[P=\frac{6}{36}=\frac{1}{6}\]</div>
+<hr>
+<h2 id="s5">بی‌ش‌م‌ارش (کتاب تکمیلی)</h2>
+<p>در برخی مسائل، بدون شمردن تک‌تک اعضا، تعداد آن‌ها را مقایسه می‌کنیم.</p>
+<h3>مثال</h3>
+<p>مجموعه <span class="m">\(S\)</span> شامل همهٔ اعداد چهاررقمی است که رقم‌های آن ۴ یا ۶ باشد. هر رقم ۲ انتخاب دارد:</p>
+<div class="m display">\[n(S)=2^4=16\]</div>
+<p>این تعداد با:</p>
+<ul><li>پرتاب همزمان چهار سکه: <span class="m">\(2^4=16\)</span></li><li>رنگ‌آمیزی جدول <span class="m">\(2\times2\)</span> با دو رنگ: <span class="m">\(2^4=16\)</span></li></ul>
+<p>برابر است.</p>
+<h3>اصل ضرب</h3>
+<p>اگر کاری در <span class="m">\(m\)</span> مرحله انجام شود و مرحلهٔ اول <span class="m">\(n_1\)</span> حالت، مرحلهٔ دوم <span class="m">\(n_2\)</span> حالت و ... داشته باشد، تعداد کل حالت‌ها:</p>
+<div class="m display">\[n_1\times n_2\times \cdots\]</div>
+<h3>مثال</h3>
+<p>پرچم سه‌رنگ افقی:</p>
+<ul><li>رنگ بالا: ۴ انتخاب</li><li>رنگ وسط: ۳ انتخاب</li><li>رنگ پایین: ۲ انتخاب</li></ul>
+<div class="m display">\[4\times3\times2=24\]</div>
+<hr>
+<h2 id="s6">جمع‌بندی فرمول‌های مهم فصل</h2>
+<div class="tw"><table><thead><tr><th>مفهوم</th><th>فرمول</th></tr></thead><tbody><tr><td>تعداد زیرمجموعه‌های یک مجموعه <span class="m">\(n\)</span> عضوی</td><td><span class="m">\(2^n\)</span></td></tr><tr><td>اجتماع</td><td><span class="m">\(n(A\cup B)=n(A)+n(B)-n(A\cap B)\)</span></td></tr><tr><td>تفاضل</td><td><span class="m">\(n(A-B)=n(A)-n(A\cap B)\)</span></td></tr><tr><td>حاصل‌ضرب دکارتی</td><td><span class="m">\(n(A\times B)=n(A)\cdot n(B)\)</span></td></tr><tr><td>احتمال</td><td><span class="m">\(P(A)=\frac{n(A)}{n(S)}\)</span></td></tr><tr><td>قطرهای <span class="m">\(n\)</span> ضلعی</td><td><span class="m">\(\frac{n(n-3)}{2}\)</span></td></tr></tbody></table></div>
+<hr>
+<h2 id="s7">خودآزمایی کوتاه</h2>
+<ol start="1"><li>مجموعه تهی را مشخص کنید:</li></ol>
+<p>الف) اعداد طبیعی بین ۵ و ۶ ب) اعداد اول و زوج ج) اعداد صحیح بین <span class="m">\(-1\)</span> و <span class="m">\(1\)</span></p>
+<p><strong>پاسخ:</strong> الف) تهی، ب) <span class="m">\(\{2\}\)</span>، ج) <span class="m">\(\{0\}\)</span></p>
+<ol start="2"><li>اگر <span class="m">\(A=\{1,2,3\}\)</span> و <span class="m">\(B=\{2,3,4\}\)</span>، حاصل <span class="m">\(A\cup B\)</span> و <span class="m">\(A\cap B\)</span> را بنویسید.</li></ol>
+<p><strong>پاسخ:</strong></p>
+<div class="m display">\[A\cup B=\{1,2,3,4\},\quad A\cap B=\{2,3\}\]</div>
+<ol start="3"><li>در پرتاب یک تاس، احتمال آمدن عدد زوج چقدر است؟</li></ol>
+<p><strong>پاسخ:</strong></p>
+<div class="m display">\[P=\frac{3}{6}=\frac{1}{2}\]</div>
+<hr>

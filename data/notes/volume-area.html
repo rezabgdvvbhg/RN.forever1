@@ -1,0 +1,127 @@
+<p>بر اساس <strong>کتاب ریاضی نهم</strong> و <strong>کتاب تکمیلی ریاضی نهم</strong></p>
+<hr>
+<h2 id="s0">ساختار فصل در دو کتاب</h2>
+<h3>کتاب درسی ریاضی نهم</h3>
+<p>درس‌های اصلی فصل ۸:</p>
+<ol start="1"><li><strong>حجم و مساحت کره</strong></li><li><strong>حجم هرم و مخروط</strong></li><li><strong>سطح و حجم</strong> (بررسی احجام مرکب، گسترده‌ها و نماها)</li></ol>
+<h3>کتاب تکمیلی ریاضی نهم</h3>
+<p>همان سرفصل‌ها، اما با نگاه عمیق‌تر و اثباتی:</p>
+<ul><li><strong>اثبات فرمول حجم و مساحت کره</strong> با روش‌های ابتکاری (سری‌های ریاضی و حد)</li><li><strong>چندوجهی‌ها</strong> (محدب، مقعر و منتظم)</li><li><strong>دوران اشکال هندسی</strong> و محاسبه حجم احجام حاصل از دوران</li><li><strong>نمایش سه‌نما و مقاطع</strong> احجام</li></ul>
+<hr>
+<h2 id="s1">۱. حجم و مساحت کره</h2>
+<h3>تعریف کره</h3>
+<p>کره مجموعه نقاطی از فضا است که از یک نقطه به نام <strong>مرکز</strong>، به یک فاصلهٔ ثابت به نام <strong>شعاع</strong> (<span class="m">\(R\)</span>) قرار دارند.</p>
+<h3>فرمول‌های کره</h3>
+<ul><li><strong>حجم کره:</strong></li></ul>
+<div class="m display">\[V = \frac{4}{3}\pi R^3\]</div>
+<ul><li><strong>مساحت رویه (سطح) کره:</strong></li></ul>
+<div class="m display">\[S = 4\pi R^2\]</div>
+<h3>رابطهٔ کره و استوانهٔ محیطی (کتاب درسی)</h3>
+<p>اگر کره‌ای به شعاع <span class="m">\(R\)</span> در استوانه‌ای محاط شود (استوانه محیط بر کره باشد):</p>
+<ul><li>شعاع قاعدهٔ استوانه: <span class="m">\(R\)</span></li><li>ارتفاع استوانه: <span class="m">\(2R\)</span></li><li>حجم استوانه:</li></ul>
+<div class="m display">\[V_{\text{استوانه}} = \pi R^2 (2R) = 2\pi R^3\]</div>
+<ul><li>حجم کره، <strong>دو سوم</strong> حجم استوانهٔ محیطی است:</li></ul>
+<div class="m display">\[V_{\text{کره}} = \frac{2}{3} V_{\text{استوانه}} = \frac{2}{3}(2\pi R^3) = \frac{4}{3}\pi R^3\]</div>
+<ul><li>مساحت کل استوانهٔ محیطی: <span class="m">\(2\pi R^2 + 2\pi R(2R) = 6\pi R^2\)</span></li><li>مساحت رویهٔ کره، <strong>دو سوم</strong> مساحت کل استوانه است: <span class="m">\(S_{\text{کره}} = \frac{2}{3}(6\pi R^2) = 4\pi R^2\)</span></li></ul>
+<h3>روش کتاب تکمیلی (اثبات با استفاده از برش و حد)</h3>
+<p>کتاب تکمیلی برای اثبات حجم کره، نیم‌کره را به <span class="m">\(n\)</span> قطعه با ارتفاع مساوی تقسیم می‌کند و در هر قطعه، یک استوانه با بیشترین حجم ممکن قرار می‌دهد. با استفاده از قضیهٔ فیثاغورس، مربع شعاع هر استوانه به دست می‌آید:</p>
+<div class="m display">\[r^2 = 1 - \left(\frac{k}{n}\right)^2\]</div>
+<p>با جمع حجم این استوانه‌ها و حد گرفتن وقتی <span class="m">\(n \to \infty\)</span>، فرمول حجم نیم‌کره به دست می‌آید:</p>
+<div class="m display">\[V_{\text{نیم‌کره}} = \frac{2}{3}\pi R^3 \Rightarrow V_{\text{کره}} = \frac{4}{3}\pi R^3\]</div>
+<h3>مثال کاربردی</h3>
+<p><strong>سؤال:</strong> حجم و مساحت کره‌ای به شعاع ۳ سانتی‌متر را به دست آورید.</p>
+<div class="m display">\[V = \frac{4}{3}\pi (3)^3 = 36\pi \ \text{cm}^3\]</div>
+<div class="m display">\[S = 4\pi (3)^2 = 36\pi \ \text{cm}^2\]</div>
+<hr>
+<h2 id="s2">۲. حجم هرم و مخروط</h2>
+<h3>۱) حجم هرم</h3>
+<div class="m display">\[V = \frac{1}{3} S_{\text{قاعده}} \times h\]</div>
+<p>که در آن <span class="m">\(S_{\text{قاعده}}\)</span> مساحت قاعده و <span class="m">\(h\)</span> ارتفاع هرم است.</p>
+<p><strong>اثبات شهودی:</strong> در یک منشور با قاعدهٔ دلخواه، می‌توان سه هرم هم‌حجم را جای داد که مجموع حجم آن‌ها برابر حجم منشور است. پس حجم هر هرم یک‌سوم حجم منشور است.</p>
+<h3>۲) حجم مخروط</h3>
+<p>مخروط، هرمی است که قاعدهٔ آن دایره است:</p>
+<div class="m display">\[V = \frac{1}{3} \pi R^2 h\]</div>
+<p>که <span class="m">\(R\)</span> شعاع قاعده و <span class="m">\(h\)</span> ارتفاع مخروط است.</p>
+<h3>نکتهٔ مهم: رابطهٔ مخروط، استوانه و کره</h3>
+<p>اگر یک استوانه، یک نیم‌کره و یک مخروط هم‌شعاع و هم‌ارتفاع داشته باشند:</p>
+<div class="m display">\[V_{\text{مخروط}} = \frac{1}{3}V_{\text{استوانه}}\]</div>
+<div class="m display">\[V_{\text{نیم‌کره}} = \frac{2}{3}V_{\text{استوانه}}\]</div>
+<p>یعنی حجم‌ها به نسبت <strong>۱ : ۲ : ۳</strong> هستند.</p>
+<h3>مثال</h3>
+<p><strong>سؤال:</strong> مخروطی به شعاع ۴ و ارتفاع ۹ داریم. حجم آن را حساب کنید.</p>
+<div class="m display">\[V = \frac{1}{3} \pi (4)^2 (9) = 48\pi\]</div>
+<hr>
+<h2 id="s3">۳. چندوجهی‌ها (بخش تکمیلی)</h2>
+<h3>تعریف</h3>
+<p>بخشی از فضا که با تعداد محدودی صفحه احاطه شده باشد، <strong>چندوجهی</strong> نامیده می‌شود.</p>
+<ul><li><strong>وجه:</strong> هر یک از چندضلعی‌های روی سطح چندوجهی.</li><li><strong>یال:</strong> ضلع مشترک دو وجه.</li><li><strong>رأس:</strong> نقطهٔ مشترک چند یال.</li></ul>
+<h3>انواع چندوجهی</h3>
+<ul><li><strong>محدب:</strong> اگر پاره‌خط بین هر دو نقطه از آن، کاملاً داخل چندوجهی قرار گیرد.</li><li><strong>مقعر:</strong> اگر حداقل برای یک زوج نقطه، پاره‌خط از داخل خارج شود.</li></ul>
+<h3>چندوجهی‌های منتظم</h3>
+<p>چندوجهی محدبی که:</p>
+<ol start="1"><li>همهٔ وجه‌های آن چندضلعی منتظم و هم‌نهشت باشند.</li><li>تعداد یال‌های متصل به هر رأس برابر باشد.</li></ol>
+<p><strong>تعداد:</strong> دقیقاً ۵ چندوجهی منتظم وجود دارد (چهاروجهی، مکعب، هشت‌وجهی، دوازده‌وجهی و بیست‌وجهی).</p>
+<h3>رابطهٔ یال‌ها، وجه‌ها و رأس‌ها</h3>
+<p>در هر چندوجهی، اگر تعداد وجه‌ها <span class="m">\(F\)</span>، یال‌ها <span class="m">\(E\)</span> و رأس‌ها <span class="m">\(V\)</span> باشد:</p>
+<div class="m display">\[V - E + F = 2\]</div>
+<p>(رابطهٔ اویلر)</p>
+<p><strong>نکته از کتاب تکمیلی:</strong> مجموع تعداد ضلع‌های همهٔ وجه‌ها، برابر <strong>دو برابر</strong> تعداد یال‌هاست. زیرا هر یال بین دو وجه مشترک است:</p>
+<div class="m display">\[\text{مجموع ضلع‌های وجه‌ها} = 2E\]</div>
+<h3>مثال</h3>
+<p>یک هرم با قاعدهٔ مربع:</p>
+<ul><li><span class="m">\(F = 5\)</span> (۱ مربع و ۴ مثلث)</li><li><span class="m">\(E = 8\)</span> (۴ یال قاعده و ۴ یال جانبی)</li><li><span class="m">\(V = 5\)</span></li><li><span class="m">\(V - E + F = 5 - 8 + 5 = 2\)</span> ✓</li></ul>
+<hr>
+<h2 id="s4">۴. احجام حاصل از دوران (بخش تکمیلی)</h2>
+<p>با دوران یک شکل مسطح حول یک محور، یک حجم سه‌بعدی ایجاد می‌شود:</p>
+<div class="tw"><table><thead><tr><th>شکل مسطح</th><th>محور دوران</th><th>حجم حاصل</th></tr></thead><tbody><tr><td>مستطیل</td><td>یکی از اضلاع</td><td>استوانه</td></tr><tr><td>مثلث قائم‌الزاویه</td><td>یکی از اضلاع قائمه</td><td>مخروط</td></tr><tr><td>نیم‌دایره</td><td>قطر</td><td>کره</td></tr><tr><td>ذوزنقه قائم‌الزاویه</td><td>ضلع قائم</td><td>مخروط ناقص (استوانک)</td></tr></tbody></table></div>
+<h3>مثال: دوران مثلث قائم‌الزاویه</h3>
+<p>مثلث قائم‌الزاویه با اضلاع قائمهٔ <span class="m">\(a\)</span> و <span class="m">\(b\)</span> را حول ضلع <span class="m">\(a\)</span> دوران می‌دهیم:</p>
+<ul><li>شعاع مخروط: <span class="m">\(b\)</span></li><li>ارتفاع مخروط: <span class="m">\(a\)</span></li><li>حجم:</li></ul>
+<div class="m display">\[V = \frac{1}{3}\pi b^2 a\]</div>
+<h3>مثال ترکیبی از کتاب تکمیلی</h3>
+<p>در مثلث <span class="m">\(ABC\)</span>، <span class="m">\(AB=12\)</span>، <span class="m">\(AC=5\)</span> و <span class="m">\(\angle A=90^\circ\)</span>. مثلث را حول ضلع <span class="m">\(BC\)</span> دوران می‌دهیم.</p>
+<ol start="1"><li>با فیثاغورس: <span class="m">\(BC=13\)</span></li><li>ارتفاع وارد بر وتر: <span class="m">\(AH = \frac{AB \cdot AC}{BC} = \frac{60}{13}\)</span></li><li>حجم حاصل، دو مخروط به هم چسبیده با شعاع مشترک <span class="m">\(AH\)</span> است:</li></ol>
+<div class="m display">\[V = \frac{1}{3}\pi (AH)^2 \cdot BH + \frac{1}{3}\pi (AH)^2 \cdot CH = \frac{1}{3}\pi (AH)^2 (BH+CH) = \frac{1}{3}\pi (AH)^2 (BC)\]</div>
+<hr>
+<h2 id="s5">۵. سطح و حجم احجام مرکب و نماها</h2>
+<h3>سطح کل احجام مرکب</h3>
+<p>مساحت کل یک جسم مرکب، مجموع مساحت رویه‌های بیرونی آن است (سطوح مشترک داخلی حساب نمی‌شوند).</p>
+<h3>مثال: استوانک (کپسول)</h3>
+<p>یک استوانه با نیم‌کره‌هایی در دو سر آن:</p>
+<ul><li>مساحت کل = مساحت رویهٔ استوانه (بدون دو قاعده) + مساحت دو نیم‌کره (یک کرهٔ کامل)</li></ul>
+<div class="m display">\[S = 2\pi R h + 4\pi R^2\]</div>
+<ul><li>حجم = حجم استوانه + حجم کره</li></ul>
+<div class="m display">\[V = \pi R^2 h + \frac{4}{3}\pi R^3\]</div>
+<h3>نمایش سه‌نما (کتاب تکمیلی)</h3>
+<p>از هر حجم سه‌بعدی می‌توان سه نما گرفت:</p>
+<ul><li><strong>نمای روبرو (جلو)</strong></li><li><strong>نمای از بالا</strong></li><li><strong>نمای از پهلو</strong></li></ul>
+<p><strong>مثال:</strong> هرم با قاعدهٔ مربع:</p>
+<ul><li>از بالا: مربع با قطرها</li><li>از روبرو: مثلث</li><li>از پهلو: مثلث</li></ul>
+<h3>مقاطع (برش)</h3>
+<p>اگر یک صفحه یک حجم را قطع کند، سطح مقطع ایجاد می‌شود:</p>
+<ul><li><strong>مقطع کره:</strong> همیشه دایره است. بزرگ‌ترین دایرهٔ مقطع، دایرهٔ عظیمه (با شعاع کره) است.</li><li><strong>مقطع مکعب:</strong> می‌تواند مثلث، چهارضلعی، پنج‌ضلعی یا شش‌ضلعی باشد.</li><li><strong>مقطع هرم:</strong> بسته به زاویهٔ برش، مثلث یا چندضلعی.</li></ul>
+<hr>
+<h2 id="s6">جدول خلاصهٔ فرمول‌ها</h2>
+<div class="tw"><table><thead><tr><th>شکل</th><th>حجم</th><th>مساحت</th></tr></thead><tbody><tr><td><strong>کره</strong></td><td><span class="m">\(V = \frac{4}{3}\pi R^3\)</span></td><td><span class="m">\(S = 4\pi R^2\)</span></td></tr><tr><td><strong>نیم‌کره</strong></td><td><span class="m">\(V = \frac{2}{3}\pi R^3\)</span></td><td>رویه: <span class="m">\(2\pi R^2\)</span> / کل: <span class="m">\(3\pi R^2\)</span></td></tr><tr><td><strong>استوانه</strong></td><td><span class="m">\(V = \pi R^2 h\)</span></td><td>کل: <span class="m">\(2\pi R h + 2\pi R^2\)</span></td></tr><tr><td><strong>مخروط</strong></td><td><span class="m">\(V = \frac{1}{3}\pi R^2 h\)</span></td><td>کل: <span class="m">\(\pi R l + \pi R^2\)</span></td></tr><tr><td><strong>هرم</strong></td><td><span class="m">\(V = \frac{1}{3} S_{\text{قاعده}} h\)</span></td><td>بسته به قاعده</td></tr><tr><td><strong>منشور</strong></td><td><span class="m">\(V = S_{\text{قاعده}} h\)</span></td><td>بسته به قاعده</td></tr></tbody></table></div>
+<hr>
+<h2 id="s7">خطاهای رایج</h2>
+<ol start="1"><li><strong>فراموش کردن ضریب <span class="m">\(\frac{4}{3}\)</span> در حجم کره.</strong></li><li><strong>اشتباه گرفتن شعاع و قطر:</strong> در فرمول‌ها همیشه از <strong>شعاع</strong> (<span class="m">\(R\)</span>) استفاده کنید.</li><li><strong>در مخروط و هرم، ضریب <span class="m">\(\frac{1}{3}\)</span> را فراموش نکنید.</strong></li><li><strong>در احجام مرکب، سطح مشترک را دوبار حساب نکنید.</strong></li><li><strong>در رابطهٔ اویلر (<span class="m">\(V-E+F=2\)</span>)، تعداد رأس‌ها و یال‌ها را دقیق بشمارید.</strong></li><li><strong>در دوران حول وتر مثلث قائم‌الزاویه، دو مخروط ایجاد می‌شود، نه یکی.</strong></li></ol>
+<hr>
+<h2 id="s8">تمرین‌های نمونه با پاسخ</h2>
+<ol start="1"><li>کره‌ای به شعاع ۶ داریم. حجم آن را حساب کنید.</li></ol>
+<p><strong>پاسخ:</strong></p>
+<div class="m display">\[V = \frac{4}{3}\pi (6)^3 = 288\pi\]</div>
+<ol start="2"><li>مخروطی به شعاع ۳ و ارتفاع ۷ داریم. حجم آن را بیابید.</li></ol>
+<p><strong>پاسخ:</strong></p>
+<div class="m display">\[V = \frac{1}{3}\pi (3)^2 (7) = 21\pi\]</div>
+<ol start="3"><li>یک نیم‌کره به شعاع ۱۰ در استوانه‌ای هم‌شعاع و هم‌ارتفاع قرار دارد. نسبت حجم نیم‌کره به استوانه چقدر است؟</li></ol>
+<p><strong>پاسخ:</strong> <span class="m">\(\frac{2}{3}\)</span></p>
+<ol start="4"><li>حجم جسمی که از دوران مستطیلی به ابعاد <span class="m">\(3 \times 5\)</span> حول ضلع ۵ به دست می‌آید، چقدر است؟</li></ol>
+<p><strong>پاسخ:</strong> استوانه‌ای با شعاع ۳ و ارتفاع ۵:</p>
+<div class="m display">\[V = \pi (3)^2 (5) = 45\pi\]</div>
+<ol start="5"><li>در یک چندوجهی، ۶ وجه و ۱۲ یال داریم. تعداد رأس‌ها چقدر است؟</li></ol>
+<p><strong>پاسخ:</strong> با رابطهٔ اویلر:</p>
+<div class="m display">\[V - 12 + 6 = 2 \Rightarrow V = 8\]</div>
+<p>(این چندوجهی، مکعب است.)</p>
+<ol start="6"><li>مقطع یک کره با صفحه‌ای که از مرکز آن می‌گذرد، چه شکلی است؟</li></ol>
+<p><strong>پاسخ:</strong> دایره‌ای با شعاع کره (دایرهٔ عظیمه).</p>
