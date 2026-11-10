@@ -1,0 +1,17 @@
+const S=require('../js/shared.js'),core=require('../js/shared.js');let f=0;
+const t=(n,ok)=>{console.log((ok?'PASS ':'FAIL ')+n);if(!ok)f++};
+const eq=(a,b)=>S.texToPlain(a)===b;
+t('texToPlain کسر',eq('\\frac{a+b}{2}','(a+b)/2'));t('texToPlain توان',eq('x^2+6x+9','x²+6x+9'));t('texToPlain رادیکال',eq('\\sqrt{18}=3\\sqrt{2}','√(18)=3√(2)'));t('texToPlain مجموعه',eq('A\\cup B','A∪B')&&eq('x\\in\\mathbb{R}','x∈ℝ'));
+const ex=S.validateExam({title:'t',questions:[{type:'mcq',text:'q',options:['a','b','c','d'],score:2,answer:'a'},{type:'weird',text:'x',score:'abc'}]});
+t('validateExam نوع نامعتبر → تشریحی',ex.questions[1].type==='descriptive'&&ex.questions[1].score===0);
+const bad=(fn)=>{try{fn();return false}catch(e){return true}};
+t('رد آزمون بدون سؤال',bad(()=>S.validateExam({questions:[]})));t('رد JSON خراب',bad(()=>S.validateExam('{x')));
+t('رد چهارگزینه‌ای ناقص',bad(()=>S.validateExam({questions:[{type:'mcq',text:'q',options:['a','b'],answer:'a'}]})));
+t('رد سؤال بدون متن',bad(()=>S.validateExam({questions:[{type:'descriptive',text:'  '}]})));
+t('سقف تعداد سؤال',S.validateExam({questions:Array(50).fill({text:'q'})},{maxQuestions:10}).questions.length===10);
+const qs=S.distributeScores([{},{},{}],20);t('جمع نمره دقیق',Math.abs(qs.reduce((a,q)=>a+q.score,0)-20)<1e-9);
+t('validateDeck',S.validateDeck({slides:[{title:'a',bullets:['x','','y'],type:'zzz'}]}).slides[0].type==='content');t('رد ارائهٔ خالی',bad(()=>S.validateDeck({slides:[]})));
+const L=require('../js/chapters.js');t('هشت فصل با ترتیب درست',L.length===8&&L[0].slug==='sets'&&L[1].slug==='real-numbers'&&L[2].t==='استدلال و اثبات در هندسه'&&L[7].t==='حجم و مساحت');
+const site=require('../lib/site.js');t('مسیرهای فصل در SEO',!!site.match('/chapters/sets')&&!!site.match('/chapters/real-numbers/notes')&&!site.match('/chapters/nope'));
+const html=site.render(site.match('/chapters/sets/notes'),'<head><!--RN:HEAD--></head><main><!--RN:BODY--></main>');t('پیش‌رندر جزوه برای خزنده',html.includes('<title>')&&html.includes('<article>')&&html.includes('BreadcrumbList'));
+process.exit(f?1:0);

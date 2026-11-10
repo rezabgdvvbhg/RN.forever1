@@ -1,0 +1,24 @@
+const {JSDOM,VirtualConsole}=require('jsdom');const R=require('path').join(__dirname,'..');const srv=require(R+'/server.js');const sleep=ms=>new Promise(r=>setTimeout(r,ms));let fails=0,errs=[];
+const ok=(n,c,x)=>{console.log((c?'PASS ':'FAIL ')+n+(c?'':' ← '+x));if(!c)fails++};
+async function open(P,path){const url='http://127.0.0.1:'+P+path;const html=await (await fetch(url)).text();const vc=new VirtualConsole();vc.on('jsdomError',e=>errs.push(e.message));const dom=new JSDOM(html,{url,runScripts:'dangerously',resources:'usable',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.fetch=(u,o)=>fetch(new URL(u,w.location.href),o);w.matchMedia=q=>({matches:true,addEventListener(){},removeEventListener(){},addListener(){}});w.scrollTo=()=>{};w.ResizeObserver=class{observe(){}disconnect(){}};w.HTMLElement.prototype.focus=function(){}}});await sleep(1600);return dom.window}
+srv.listen(0,'127.0.0.1',async()=>{const P=srv.address().port;let w=await open(P,'/history');let d=w.document;
+ ok('یادمان هفت چهره',d.querySelectorAll('.mf').length===7,d.querySelectorAll('.mf').length);
+ const names=[...d.querySelectorAll('.mf-p b')].map(b=>b.textContent).join('|');ok('ترتیب نام‌ها',names==='اقلیدس|ارشمیدس|خوارزمی|عمر خیام|فیثاغورس|آیزاک نیوتن|امی نوتر',names);
+ const bgs=['m11','m22','m33','m44','m55','m66','m77'];
+ for(let i=0;i<7;i++){d.querySelectorAll('.mf')[i].click();await sleep(60);const on=[...d.querySelectorAll('.hx-b')].map(x=>x.getAttribute('src')||'').join();
+  ok(`انتخاب ${i+1}: پس‌زمینه ${bgs[i]} و پرتره m${i+1}`,on.includes('/'+bgs[i]+'.webp')&&d.querySelector('.hx-fig img').src.includes('/m'+(i+1)+'.webp')&&d.querySelector('.hx').dataset.state==='detail'&&w.location.pathname==='/history/'+['euclid','archimedes','khwarizmi','khayyam','pythagoras','newton','noether'][i],on+' '+w.location.pathname)}
+ ok('بخش‌های زندگی‌نامه، آثار و پیوند فصل‌ها',d.querySelectorAll('.hx-sec').length>=3&&d.querySelectorAll('.cc').length>=1&&[...d.querySelectorAll('.cc')].every(a=>/^\/chapters\//.test(a.getAttribute('href'))&&/ارتباط (تاریخی مستقیم|آموزشی)/.test(a.textContent)));ok('نکتهٔ تاریخی و برچسب مستند',!!d.querySelector('.hx-note')&&d.querySelectorAll('.bd').length>=3);
+ ok('ویدیوی خالی: بدون دکمهٔ پخش جعلی',!d.querySelector('.hx-player')&&!d.querySelector('.hx-media'));
+ d.querySelector('#hback').click();await sleep(60);ok('بازگشت به گالری',d.querySelector('.hx').dataset.state==='gallery'&&!d.querySelector('#hg').hidden);w.close();
+ w=await open(P,'/history/newton');d=w.document;ok('لینک مستقیم /history/newton',d.querySelector('.hx').dataset.state==='detail'&&d.querySelector('.hx-panel h2').textContent==='آیزاک نیوتن');
+ d.dispatchEvent(new w.KeyboardEvent('keydown',{key:'ArrowLeft'}));await sleep(60);ok('کلید ← شخصیت بعدی (نوتر)',d.querySelector('.hx-panel h2').textContent==='امی نوتر');
+ d.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape'}));await sleep(60);ok('Esc → گالری',d.querySelector('.hx').dataset.state==='gallery');w.close();
+ // معماری رسانهٔ آینده: رسانهٔ معتبر نمایش داده می‌شود، نامعتبر یا بدون فایل پنهان می‌ماند
+ {const url='http://127.0.0.1:'+P+'/history/euclid';const html=await (await fetch(url)).text();const vc=new VirtualConsole();const dom=new JSDOM(html,{url,runScripts:'dangerously',resources:'usable',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.matchMedia=q=>({matches:true,addEventListener(){},removeEventListener(){},addListener(){}});w.scrollTo=()=>{};w.ResizeObserver=class{observe(){}disconnect(){}};w.HTMLElement.prototype.focus=function(){};
+   w.fetch=async(u,o)=>{u=String(u);if(/history\.json/.test(u)){const j=await (await fetch(new URL(u,url))).json();j[0].media=[{id:'a',type:'animation',src:'/files/demo.mp4',title:'انیمیشن نمونه',duration:'۰۱:۰۰',caption:'توضیح',chapter:'geometry-reasoning'},{id:'b',type:'video',src:'/files/missing.mp4',title:'فایل ناموجود'},{id:'c',type:'bogus',src:'/files/x.mp4',title:'نوع نامعتبر'},{id:'d',type:'video',src:'javascript:alert(1)',title:'منبع ناامن'}];return{ok:true,json:async()=>j}}
+    if(o&&o.method==='HEAD')return{ok:/demo\.mp4/.test(u)};return fetch(new URL(u,url),o)}}});await sleep(2000);const d=dom.window.document;
+  ok('رسانهٔ معتبر با فایل موجود نمایش داده می‌شود',d.querySelectorAll('.hxm').length===1&&/انیمیشن نمونه/.test(d.querySelector('.hxm').textContent),d.querySelectorAll('.hxm').length);
+  ok('رسانهٔ بدون فایل/نوع نامعتبر/منبع ناامن دکمهٔ شکسته نمی‌سازد',d.querySelectorAll('.pbtn').length===1&&!/ناموجود|نامعتبر|ناامن/.test(d.querySelector('.hx-panel').textContent));
+  d.querySelector('.hxm .pbtn').click();ok('پخش، عنصر video با منبع درست می‌سازد',d.querySelector('.hxm video')&&d.querySelector('.hxm video').getAttribute('src')==='/files/demo.mp4');dom.window.close()}
+ const real=errs.filter(e=>!/three|WebGL|Could not load|canvas|AudioContext|Not implemented|navigation/i.test(e));ok('بدون خطای کنسول',real.length===0,real.join('|'));
+ srv.close();process.exit(fails?1:0)});

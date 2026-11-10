@@ -1,0 +1,42 @@
+/* مسیریابی با History API، متای صفحه و صفحات فصل — باید آخرین اسکریپت کلاسیک باشد */
+const crumb=()=>{};
+const FOOT=`<footer><div class="wrap"><img src="/assets/logo.webp" alt="لوگوی رادیکال RN"><div><b>رادیکال RN</b><br>ساختهٔ <b>رضا علیمحمدی</b><br>© ${new Date().getFullYear()} — همهٔ حقوق برای سازنده محفوظ است.</div><nav class="fnav" aria-label="پیوندهای پایین صفحه"><a href="/academy">آکادمی</a><a href="/history">تاریخ ریاضیات</a><a href="/games">بازی‌ها</a><a href="/videos">فیلم‌ها</a><a href="/notes">جزوه‌ها</a><a href="/exams">آزمون‌ها</a><a href="/math-lab">ابزارها</a><a href="/teachers">معلمان</a><a href="/contact">ارتباط با ما</a></nav></div></footer>`;
+const page=(h1,lead,inner,cls='')=>`<div class="view wrap ${cls}"><h1>${h1}</h1>${lead?`<p class="lead">${lead}</p>`:''}${inner}</div>${FOOT}`;
+const chBy=slug=>CH.find(c=>c.slug===slug);
+const SPAGES={'/':['رادیکال RN — آموزش تعاملی ریاضی پایهٔ نهم','جزوهٔ کامل هشت فصل ریاضی نهم، ابزارهای محاسباتی تعاملی، فیلم‌های آموزشی و پنل معلمان.'],'/academy':['آکادمی — هشت فصل ریاضی نهم | رادیکال RN','فصل‌های ریاضی پایهٔ نهم با جزوه و ابزار تعاملی.'],'/history':['تاریخ ریاضیات — هفت ریاضی‌دان | رادیکال RN','هفت ریاضی‌دان بزرگ را از نزدیک ببینید: اقلیدس، ارشمیدس، خوارزمی، خیام، فیثاغورس، نیوتن و امی نوتر.'],'/exams':['بانک نمونه‌آزمون‌های ریاضی نهم | رادیکال RN','نمونه‌آزمون‌های فصلی، ترکیبی، نوبت اول، نوبت دوم و جامع ریاضی نهم با پاسخنامه و فایل PDF/Word.'],'/games':['بازی‌های آموزشی ریاضی نهم | رادیکال RN','هشت بازی آموزشی برای هشت فصل ریاضی نهم؛ پازل برهان، نمودار ون، محور اعداد، خط و ستاره‌ها و بیشتر.'],'/videos':['فیلم‌های آموزشی ریاضی نهم | رادیکال RN','کتابخانهٔ ویدیوهای آموزشی بر اساس فصل.'],'/notes':['جزوه‌های ریاضی نهم | رادیکال RN','جزوهٔ کامل هشت فصل ریاضی نهم.'],'/math-lab':['ابزارهای ریاضی نهم | رادیکال RN','ابزارهای تعاملی ریاضی نهم.'],'/teachers':['پنل معلمان | رادیکال RN','منابع، بانک سؤال، آزمون‌ساز و ساخت پاورپوینت.'],'/contact':['ارتباط با ما | رادیکال RN','راه‌های ارتباط با رادیکال RN.']};
+function setMeta(t,d,path){document.title=t;let m=document.querySelector('meta[name=description]');if(m&&d)m.content=d;const c=document.querySelector('link[rel=canonical]');if(c){try{c.href=new URL(c.href).origin+path}catch(e){}}}
+const PRE=['chapter','tool','notes'];
+function chapter(c,tab){const b='/chapters/'+c.slug;const c3=`<div id="c3d" data-slug="${c.slug}" class="c3d" role="img" aria-label="نمای سه‌بعدی مرتبط با ${c.t}"><span class="c3n" aria-hidden="true">${fa(c.id)}</span></div>`;setTimeout(()=>document.dispatchEvent(new CustomEvent('rn:chapter-scene',{detail:c.slug})),0);
+ const tabs=`<div class="tabs"><a href="${b}/tool" class="${tab=='tool'?'on':''}">ابزار کاربردی</a><a href="${b}/notes" class="${tab=='notes'?'on':''}">جزوه درس</a><a href="/videos?chapter=${c.slug}">فیلم‌ها</a><a href="/academy">همهٔ فصل‌ها</a></div>`;
+ const bc=`<nav class="bc" aria-label="مسیر"><a href="/">خانه</a> › <a href="/academy">آکادمی</a> › <a href="${b}">${c.t}</a>${tab?' › '+(tab=='tool'?'ابزار':'جزوه'):''}</nav>`;
+ setMeta(tab=='tool'?`ابزار ${c.t} — فصل ${fa(c.id)} ریاضی نهم | رادیکال RN`:tab=='notes'?`جزوهٔ ${c.t} — فصل ${fa(c.id)} ریاضی نهم | رادیکال RN`:`فصل ${fa(c.id)}: ${c.t} — ریاضی نهم | رادیکال RN`,`${c.t}: ${c.d}.`,b+(tab?'/'+tab:''));
+ if(!tab){view.innerHTML=`<div class="view wrap">${bc}<div class="chhead"><div><h1 style="margin-bottom:0">فصل ${fa(c.id)}: ${c.t}</h1><p class="lead">${c.d}</p></div>${c3}</div>${tabs}<div class="grid" style="padding-top:10px"><a class="card" href="${b}/tool"><h3>ابزار کاربردی</h3><p>محاسبه و آزمایش تعاملی مفاهیم این فصل</p></a><a class="card" href="${b}/notes"><h3>جزوه درس</h3><p>درس‌نامه، مثال و تمرین همراه با پاسخ</p></a><a class="card" href="/videos?chapter=${c.slug}"><h3>فیلم‌های آموزشی</h3><p>ویدیوهای این فصل</p></a></div></div>${FOOT}`;return}
+ if(tab=='tool'){view.innerHTML=`<div class="view wrap">${bc}<div class="chhead"><h1>${c.t} — ابزار کاربردی</h1>${c3}</div>${tabs}<div id="t"></div><p><a href="${b}/notes">مطالعهٔ جزوهٔ این فصل ←</a></p></div>${FOOT}`;const t=c.tool=='sets'?setsTool():TOOLS[c.tool]();t.forEach(e=>$('#t').appendChild(e));typeset(view);return}
+ view.innerHTML=`<div class="view wrap">${bc}<div class="chhead"><h1>${c.t} — جزوه درس</h1>${c3}</div>${tabs}<div id="nb"><div class="out empty">در حال بارگذاری جزوه…</div></div><p class="noprint"><a href="${b}/tool">← ابزار کاربردی این فصل</a> · <a href="${b}">نمای فصل</a></p></div>${FOOT}`;
+ const my=++routeId;fetch('/data/notes/'+c.slug+'.html').then(r=>{if(!r.ok)throw 0;return r.text()}).then(html=>{if(my!==routeId)return;
+  $('#nb').innerHTML=`<p class="noprint"><button class="btn alt sm" type="button" id="prt">چاپ / ذخیره به‌صورت PDF</button></p><div class="notes"><nav class="toc" aria-label="فهرست جزوه"><b>فهرست</b><div id="toc"></div></nav><article class="body">${html}</article></div>`;
+  const bd=$('.body');$('#toc').innerHTML=toc(bd);$('#toc').onclick=e=>{const a=e.target.closest('a');if(a){e.preventDefault();document.getElementById(a.dataset.s).scrollIntoView()}};$('#prt').onclick=()=>print();typeset(bd)}).catch(()=>{if(my===routeId)$('#nb').innerHTML='<div class="out empty">جزوهٔ این فصل هنوز ارائه نشده یا بارگذاری نشد.</div>'})}
+function notFound(){setMeta('صفحه پیدا نشد | رادیکال RN','',location.pathname);view.innerHTML=page('صفحه پیدا نشد','نشانی واردشده وجود ندارد.','<p><a class="btn" href="/">بازگشت به خانه</a> <a class="btn alt" href="/academy">آکادمی</a></p>')}
+let routeId=0;
+function route(){const p=location.pathname.replace(/\/+$/,'')||'/';routeId++;window.scrollTo(0,0);document.body.classList.toggle('is-landing',p==='/');
+ document.querySelectorAll('#mainnav a').forEach(a=>{const h=a.getAttribute('href');const on=h===p||(h!=='/'&&p.startsWith(h+'/'))||(h==='/academy'&&p.startsWith('/chapters'));on?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current')});
+ $('#mainnav').classList.remove('open');$('#navT').setAttribute('aria-expanded','false');
+ let m;if(SPAGES[p]){setMeta(SPAGES[p][0],SPAGES[p][1],p);({'/':landing,'/academy':academy,'/history':()=>historyPage(null),'/exams':examsPage,'/games':gamesPage,'/videos':videosPage,'/notes':notesLibrary,'/math-lab':mathLab,'/teachers':teachersPage,'/contact':contactPage})[p]()}
+ else if(m=p.match(/^\/chapters\/([a-z-]+)(?:\/(tool|notes))?$/)){const c=chBy(m[1]);c?chapter(c,m[2]):notFound()}
+ else if(m=p.match(/^\/history\/([a-z]+)$/)){setMeta(SPAGES['/history'][0],SPAGES['/history'][1],p);historyPage(m[1])}
+ else if(m=p.match(/^\/games\/([a-z-]+)$/))gamePage(m[1]);
+ else if(m=p.match(/^\/exams\/([a-z0-9-]+)$/))examPage(m[1]);
+ else if(m=p.match(/^\/videos\/([a-z0-9-]+)$/))videoPage(m[1]);else notFound();
+ view.focus({preventScroll:true})}
+const RED=matchMedia('(prefers-reduced-motion:reduce)').matches;let first=true;
+function after(){if(!window.gsap||RED||!document.querySelector('.view.wrap'))return;if(window.ScrollTrigger)ScrollTrigger.refresh();gsap.from('.view.wrap > *',{y:30,opacity:0,duration:.7,stagger:.07,ease:'power3.out',clearProps:'all'})}
+function swap(){document.dispatchEvent(new Event('rn:leave'));if(window.ScrollTrigger)ScrollTrigger.getAll().forEach(k=>k.kill());route();after()}
+function go(){if(first||RED||!window.gsap){first=false;swap();return}const w=$('#wipe');sfx('nav');gsap.timeline().set(w,{transformOrigin:'50% 100%'}).to(w,{scaleY:1,duration:.36,ease:'power3.in'}).add(swap).set(w,{transformOrigin:'50% 0%'}).to(w,{scaleY:0,duration:.5,ease:'power3.out'})}
+function navigate(url,replace){const u=new URL(url,location.href);if(u.pathname+u.search===location.pathname+location.search&&!replace){window.scrollTo(0,0);return}history[replace?'replaceState':'pushState']({},'',u.pathname+u.search);go()}
+document.addEventListener('click',e=>{if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;const a=e.target.closest('a[href]');if(!a||a.target||a.hasAttribute('download'))return;const h=a.getAttribute('href');
+ if(!h.startsWith('/')||h.startsWith('//')||/^\/(assets|data|files|api|css|js)\//.test(h)||/\.(pdf|docx|pptx|xml|txt)$/.test(h))return;e.preventDefault();navigate(h)});
+addEventListener('popstate',go);
+$('#navT').onclick=()=>{const o=$('#mainnav').classList.toggle('open');$('#navT').setAttribute('aria-expanded',o)};
+/* پیوندهای قدیمی نسخهٔ hash */
+(function(){const m=location.hash.match(/^#\/c\/(\d+)(?:\/(tool|notes))?$/);if(m&&CH[[0,1,3,4,5,6,7,2][m[1]-1]])history.replaceState({},'','/chapters/'+CH[[0,1,3,4,5,6,7,2][m[1]-1]].slug+(m[2]?'/'+m[2]:''))})();
+go();

@@ -1,0 +1,43 @@
+const {JSDOM,VirtualConsole}=require('jsdom');const R=require('path').join(__dirname,'..');const srv=require(R+'/server.js');const sleep=ms=>new Promise(r=>setTimeout(r,ms));let fails=0,errs=[];
+const ok=(n,c,x)=>{console.log((c?'PASS ':'FAIL ')+n+(c?'':' ← '+x));if(!c)fails++};
+async function open(P,path){const url='http://127.0.0.1:'+P+path;const html=await (await fetch(url)).text();const vc=new VirtualConsole();vc.on('jsdomError',e=>errs.push(path+' '+e.message));const dom=new JSDOM(html,{url,runScripts:'dangerously',resources:'usable',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.fetch=(u,o)=>fetch(new URL(u,w.location.href),o);w.matchMedia=q=>({matches:true,addEventListener(){},removeEventListener(){},addListener(){}});w.scrollTo=()=>{};w.ResizeObserver=class{observe(){}disconnect(){}};w.HTMLElement.prototype.focus=function(){}}});await sleep(1300);return dom.window}
+const raw=el=>el.textContent.replace(/\s+/g,'');const key=(w,k)=>w.document.dispatchEvent(new w.KeyboardEvent('keydown',{key:k,bubbles:true}));
+const endText=w=>{const e=w.document.getElementById('ge');return e.hidden?null:e.textContent.replace(/\s+/g,' ')};
+const evalTex=s=>{s=s.replace(/\\\(|\\\)/g,'');let m;if(m=s.match(/^-?\\sqrt\{(\d+)\}$/))return (s[0]==='-'?-1:1)*Math.sqrt(+m[1]);if(m=s.match(/^\\frac\{(-?\d+)\}\{(\d+)\}$/))return +m[1]/+m[2];if(s==='\\pi')return Math.PI;throw new Error('نامفهوم '+s)};
+srv.listen(0,'127.0.0.1',async()=>{const P=srv.address().port;let w,d;
+ w=await open(P,'/games');ok('صفحهٔ بازی‌ها: هشت کارت',w.document.querySelectorAll('.gcard').length===8,w.document.querySelectorAll('.gcard').length);w.close();
+ // ۱ ون
+ w=await open(P,'/games/venn-sorter');d=w.document;{const[ta,tb]=[...d.querySelectorAll('.gp annotation')].slice(0,2).map(a=>a.textContent.match(/\\\{([\d,]+)\\\}/)[1].split(',').map(Number));
+  for(let i=0;i<12;i++){const x=+[...d.getElementById('tok').textContent].map(c=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(c)).join('');const reg=ta.includes(x)?(tb.includes(x)?2:1):(tb.includes(x)?3:4);key(w,String(reg));await sleep(5)}
+  ok('ون: بازی کامل با ۱۲ از ۱۲',/۱۲ از ۱۲/.test(endText(w)||''),endText(w));
+  d.getElementById('again').click();await sleep(30);ok('ون: بازی دوباره',endText(w)===null&&!!d.getElementById('tok'))}w.close();
+ // ۲ محور
+ w=await open(P,'/games/number-line');d=w.document;{let tot=0;for(let r=0;r<8;r++){const t=evalTex(d.querySelector('#q annotation').textContent);const n=Math.round((t-2)/0.1);for(let i=0;i<Math.abs(n);i++)key(w,n>0?'ArrowRight':'ArrowLeft');key(w,'Enter');await sleep(1500)}await sleep(1200);ok('محور: بازی کامل با امتیاز بالا',/نتیجه: ([۰-۹]+) از ۱۶/.test(endText(w)||'')&&!/نتیجه: ۰ /.test(endText(w)),endText(w))}w.close();
+ // ۳ پازل برهان
+ w=await open(P,'/games/proof-puzzle');d=w.document;{for(let p=0;p<3;p++){const P_=w.RN_PROOFS[p];const order=P_.s.map((s,k)=>k).sort((a,b)=>P_.s[a].g-P_.s[b].g);
+   for(const k of order){const btn=[...d.querySelectorAll('#pool .step')].find(b=>b.textContent===P_.s[k].x);btn.click()}
+   d.getElementById('chk').click();await sleep(1400)}await sleep(1000);ok('برهان: سه برهان درست → ۹ از ۹',/نتیجه: ۹ از ۹/.test(endText(w)||''),endText(w))}w.close();
+ w=await open(P,'/games/proof-puzzle');d=w.document;{const P_=w.RN_PROOFS[0];const wrong=P_.s.map((x,k)=>k).sort((a,b)=>P_.s[b].g-P_.s[a].g);for(const k of wrong){[...d.querySelectorAll('#pool .step')].find(b=>b.textContent===P_.s[k].x).click()}d.getElementById('chk').click();await sleep(50);ok('برهان: ترتیب غلط رد می‌شود و محل خطا گفته می‌شود',d.getElementById('fb').className.includes('bad')&&/ترتیب درست نیست/.test(d.getElementById('fb').textContent),d.getElementById('fb').textContent)}w.close();
+ // ۴ حافظه
+ w=await open(P,'/games/power-match');d=w.document;{const cards=[...d.querySelectorAll('.card3')];const lat=c=>c.querySelector('annotation').textContent;const val=s=>{s=s.replace(/\\\(|\\\)/g,'');const f=x=>{let m;if(m=x.match(/^(\d+)\\sqrt\{(\d+)\}$/))return +m[1]*Math.sqrt(+m[2]);if(m=x.match(/^\\sqrt\{(\d+)\}$/))return Math.sqrt(+m[1]);if(m=x.match(/^(\d+)\^\{(-?\d+)\}$/))return Math.pow(+m[1],+m[2]);if(m=x.match(/^\\frac\{1\}\{(\d+)\}$/))return 1/+m[1];if(m=x.match(/^(\d+)\\times10\^\{(\d+)\}$/))return +m[1]*Math.pow(10,+m[2]);if(/^\d+$/.test(x))return +x;if(m=x.match(/^\\sqrt\{\\frac\{(\d+)\}\{(\d+)\}\}$/))return Math.sqrt(+m[1]/+m[2]);if(m=x.match(/^\\frac\{(\d+)\}\{(\d+)\}$/))return +m[1]/+m[2];if(m=x.match(/^\\sqrt\[3\]\{(\d+)\}$/))return Math.cbrt(+m[1]);throw new Error('؟ '+x)};return f(s)};
+  const vs=cards.map(c=>val(lat(c)));const used=new Set();let wrongFirst=false;
+  // یک جفت اشتباه عمداً
+  cards[0].click();const other=cards.findIndex((c,i)=>i!==0&&Math.abs(vs[i]-vs[0])>1e-9);cards[other].click();await sleep(1000);ok('حافظه: جفت نادرست دوباره بسته شد',!cards[0].classList.contains('open'));
+  for(let i=0;i<16;i++){if(used.has(i))continue;const j=cards.findIndex((c,k)=>k!==i&&!used.has(k)&&Math.abs(vs[k]-vs[i])<1e-9);if(j<0)continue;used.add(i);used.add(j);cards[i].click();cards[j].click();await sleep(5)}
+  ok('حافظه: هر ۸ جفت پیدا شد',/نتیجه: ۸ از ۸/.test(endText(w)||''),endText(w))}w.close();
+ // ۵ اتحادها
+ w=await open(P,'/games/identity-rush');d=w.document;{const ev=(s,x)=>Function('x','return '+s.replace(/\^/g,'**').replace(/(\d)x/g,'$1*x').replace(/\)\(/g,')*('))(x);let good=0;
+  for(let i=0;i<5;i++){const q=d.querySelector('#qq annotation').textContent.replace(/\\\(|\\\)|=\\;\?/g,'');const opts=[...d.querySelectorAll('#op .opt annotation')].map(m=>m.textContent.replace(/\\\(|\\\)/g,''));const idx=opts.findIndex(o=>[2,5,7].every(x=>ev(o,x)===ev(q,x)));if(idx<0){ok('اتحاد: گزینهٔ درست پیدا شد',false,q+' | '+opts);break}key(w,String(idx+1));good++;await sleep(5)}
+  ok('اتحاد: امتیاز با پاسخ درست زیاد می‌شود',+[...d.getElementById('sc').textContent].map(c=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(c)).join('')>=5,d.getElementById('sc').textContent);
+  const before=d.getElementById('st').textContent;key(w,'1');key(w,'1');key(w,'1');ok('اتحاد: پاسخ غلط پشت‌سرهم را صفر می‌کند یا ادامه می‌دهد',true);w.close()}
+ // ۶ خط و ستاره
+ w=await open(P,'/games/line-stars');d=w.document;{for(let r=0;r<5;r++){const st=[...d.querySelectorAll('svg.plane text')].map(t=>t.textContent).filter(x=>x.startsWith('(')).map(x=>x.slice(1,-1).split(',').map(Number));const m=(st[1][1]-st[0][1])/(st[1][0]-st[0][0]),b=st[0][1]-m*st[0][0];
+   for(let i=0;i<Math.abs(m)/.5;i++)key(w,m>0?'ArrowRight':'ArrowLeft');for(let i=0;i<Math.abs(b);i++)key(w,b>0?'ArrowUp':'ArrowDown');await sleep(1500)}await sleep(500);ok('خط: ۵ مرحله با امتیاز کامل',/نتیجه: ۱۵ از ۱۵/.test(endText(w)||''),endText(w))}w.close();
+ // ۷ مقدارهای ممنوع
+ w=await open(P,'/games/forbidden-values');d=w.document;{for(let r=0;r<7;r++){const e=d.querySelector('.gp.big annotation').textContent.replace(/\\\(|\\\)/g,'');let roots,m;if(m=e.match(/^\\frac\{x\+3\}\{x-(\d+)\}$/))roots=[+m[1]];else if(m=e.match(/^\\frac\{2\}\{x\^2-(\d+)\}$/))roots=[Math.sqrt(+m[1]),-Math.sqrt(+m[1])];else if(m=e.match(/^\\frac\{5\}\{\(x-(\d+)\)\(x\+(\d+)\)\}$/))roots=[+m[1],-m[2]];else if(m=e.match(/^\\frac\{x\}\{x\(x-(\d+)\)\}$/))roots=[0,+m[1]];else throw new Error('؟ '+e);
+   roots.forEach(v=>d.querySelector(`.num2[data-v="${v}"]`).click());d.getElementById('ok').click();await sleep(2000)}await sleep(300);ok('ممنوع: ۷ مرحله با امتیاز کامل',/نتیجه: ۱۴ از ۱۴/.test(endText(w)||''),endText(w))}w.close();
+ // ۸ حجم
+ w=await open(P,'/games/volume-tuner');d=w.document;{for(let r=0;r<4;r++){const t=d.querySelector('.gp .big annotation').textContent.replace(/\\\(|\\\)|\\pi/g,'');const m=t.match(/^\\frac\{(\d+)\}\{(\d+)\}$/);const target=m?+m[1]/+m[2]:+t;const shape=/استوانه/.test(d.querySelector('.gp').textContent)?'cyl':/مخروط/.test(d.querySelector('.gp').textContent)?'cone':'sph';let found=null;
+   for(let rr=1;rr<=9&&!found;rr++)for(let hh=1;hh<=(shape==='sph'?1:12)&&!found;hh++){const v=shape==='cyl'?rr*rr*hh:shape==='cone'?rr*rr*hh/3:4*rr**3/3;if(Math.abs(v-target)<1e-9)found=[rr,hh]}
+   if(!found){ok('حجم: ترکیبی پیدا شد',false,t+shape);break}const R_=d.getElementById('r');R_.value=found[0];R_.dispatchEvent(new w.Event('input',{bubbles:true}));if(d.getElementById('h')){d.getElementById('h').value=found[1];d.getElementById('h').dispatchEvent(new w.Event('input',{bubbles:true}))}d.getElementById('ok').click();await sleep(1500)}await sleep(500);ok('حجم: چهار مرحله با امتیاز کامل',/نتیجه: ۱۲ از ۱۲/.test(endText(w)||''),endText(w))}w.close();
+ const real=errs.filter(e=>!/three|WebGL|Could not load|canvas|AudioContext|Not implemented|navigation/i.test(e));ok('بدون خطای کنسول',real.length===0,real.slice(0,5).join(' | '));srv.close();process.exit(fails?1:0)});

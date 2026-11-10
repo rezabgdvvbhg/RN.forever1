@@ -1,0 +1,19 @@
+{
+ "name": "radical-rn",
+ "version": "5.0.0",
+ "private": true,
+ "description": "\u0631\u0627\u062f\u06cc\u06a9\u0627\u0644 RN \u2014 \u067e\u0644\u062a\u0641\u0631\u0645 \u0622\u0645\u0648\u0632\u0634\u06cc \u0631\u06cc\u0627\u0636\u06cc \u0646\u0647\u0645",
+ "engines": {
+  "node": ">=18"
+ },
+ "scripts": {
+  "start": "node server.js",
+  "build": "node scripts/build.js",
+  "test": "node js/core.test.js && node tests/katex-check.js && node tests/shared.test.js && node tests/qgen.test.js && node tests/exams.test.js && node tests/history.test.js && node tests/games-logic.test.js && node tests/zf.test.js && node tests/jarvis.test.js && node tests/rn3d.test.mjs && node tests/pptx.test.js && node tests/server.test.js",
+  "test:ui": "node tests/ui-smoke.js && node tests/ui-tools.js && node tests/ui-history.js && node tests/ui-games.js && node tests/ui-zf.js && node tests/ui-jarvis.js",
+  "build:exams": "node scripts/build-exams.js && python3 tools/convert-exams.py"
+ },
+ "dependencies": {
+  "pptxgenjs": "^4.0.1"
+ }
+}

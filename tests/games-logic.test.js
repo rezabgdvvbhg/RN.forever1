@@ -1,0 +1,11 @@
+const L=require('../js/games.js');let f=0;const t=(n,ok)=>{console.log((ok?'PASS ':'FAIL ')+n);if(!ok)f++};
+const A=[1,2,3,4,5],B=[4,5,6,7];
+t('ون: فقط A',L.vennRegion(2,A,B)==='onlyA');t('ون: مشترک',L.vennRegion(4,A,B)==='both');t('ون: فقط B',L.vennRegion(7,A,B)==='onlyB');t('ون: هیچ‌کدام',L.vennRegion(9,A,B)==='none');
+t('امتیاز محور',L.lineScore(1.414,Math.SQRT2)===2&&L.lineScore(1.7,Math.SQRT2)===1&&L.lineScore(3,Math.SQRT2)===0);
+const S=[{g:0},{g:1},{g:1},{g:2}];
+t('برهان: ترتیب معتبر',L.proofOrderOk(S,[0,1,2,3])&&L.proofOrderOk(S,[0,2,1,3]));t('برهان: ترتیب نامعتبر',!L.proofOrderOk(S,[1,0,2,3])&&!L.proofOrderOk(S,[0,1,3,2])&&!L.proofOrderOk(S,[0,1,2]));
+t('ساده‌سازی رادیکال',JSON.stringify(L.sqs(72))===JSON.stringify([6,2])&&JSON.stringify(L.sqs(50))===JSON.stringify([5,2])&&JSON.stringify(L.sqs(7))===JSON.stringify([1,7]));
+const ln=L.lineThrough([1,3],[3,7]);t('خط از دو نقطه',ln.m===2&&ln.b===1&&L.passes(2,1,[1,3])&&!L.passes(2,2,[1,3]));
+t('مقادیر ممنوع',L.setEq(L.forbidden([3,-3,3]),[-3,3]));
+t('حجم استوانه',L.volEq(L.vol('cyl',3,4),{n:36,d:1}));t('حجم مخروط',L.volEq(L.vol('cone',3,4),{n:12,d:1})&&L.volEq(L.vol('cone',2,2),{n:8,d:3}));t('حجم کره',L.volEq(L.vol('sph',3,0),{n:36,d:1})&&L.volEq(L.vol('sph',6,0),{n:288,d:1}));
+process.exit(f?1:0);
